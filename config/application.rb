@@ -10,8 +10,7 @@ module ECA
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-    before_action :configure_permitted_parameters, if: :devise_controller?
-
+   
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
     end
