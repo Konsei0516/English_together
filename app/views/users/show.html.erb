@@ -2,6 +2,11 @@
   <h2><%= @nickname %> Mypage</h2>
   <ul>
     <li>画像</li>
+    
+    <%= form_for(@user) do |f| %>
+      <%=f.label :image,"ユーザー画像" %>
+      <%= f.file_field :image %>
+    <% end %>
     <li>英語資格など</li>
     <li>自己紹介</li>
     <li>フォローする</li>
