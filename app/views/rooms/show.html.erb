@@ -2,14 +2,11 @@
   <h1>Chat room</h1>
   <div id = "messages">
     <ul class = "list-group">
-      <%= render @messages %>
-      <span><%= @messages.user.nickname%></span>
+      <%= render partial: "messages/message", locals: { message: @messages } %>
     </ul>
   </div>
-    <form class="form-inline">
-    <div class ="form-group">
-      <input type="text" class="form-control" id="chat-input"/>
-    </div>
-    <button id="button" class="btn btn-primary">送信</button>
-  </form>
+  <%= form_with(model: @messages,local: true) do |f| %>
+    <%= f.text_field :content %>
+    <%= f.submit '送信' %>
+  <% end %>
 </div>

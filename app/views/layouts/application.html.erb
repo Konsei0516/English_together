@@ -11,22 +11,25 @@
 
   <body>
   <header class="header">
-    <div class="header__bar row">
-      <h1 class="grid-6"><a href="/">ECA</a></h1>
-      <% if user_signed_in? %>
-        <div class="user_nav grid-6">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          <a class="post" href="/rooms/show">Room</a>
-          <a clsss="mypage" href="/users/show">マイページ</a>
-        </div>
-      <% else %>
-        <div class="grid-6">
-          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-        </div>
-      <% end %>
+    <div class="container">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">ECA</a></h1>
+        <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <a class="post" href="/rooms/show">Room</a>
+            <a clsss="mypage" href="/users/show">マイページ</a>
+          </div>
+        <% else %>
+          <div class="grid-6">
+            <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+            <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </header>
+  
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
