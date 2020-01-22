@@ -61,3 +61,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'byebug'
+gem 'redis'
+gem 'redis-rails'
+gem 'redis-namespace'
