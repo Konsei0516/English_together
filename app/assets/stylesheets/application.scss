@@ -14,10 +14,47 @@
  *= require_self
  */
 @import "bootstrap";
+@import "./font-awesome";
+
+.btn-real-dent {
+  /*周りの凹み*/
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: rgba(3, 169, 244, 0.54);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  background: #f7f7f7;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+}
+.btn-real-dent i {
+  /*ボタン自体*/
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  left: 10px;
+  top: 9px;
+  border-radius: 50%;
+  font-size: 30px;
+  background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: solid 2px #b5b5b5;
+}
+  
+.btn-real-dent .fa:active {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: solid 2px #d8d8d8;
+}
 
 header{
-  background-color: rgb(25, 21, 46);
+  background-color: rgb(51, 41, 102);
   position: fixed;
+  top: 0;
   z-index: 2;
   width:100%;
 }
