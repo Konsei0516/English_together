@@ -1,4 +1,18 @@
-<li class = "list-group-item">  
-  <p class = "user-message"><%= message.content %></p>
-  <p class = "user-name"><%= message.user.nickname %></p>
-</li>
+<div class="message">
+  <div class="kaiwa">
+    <% if message.user == current_user %>
+      <% position = 'right' %>
+    <% else %>
+      <% position = 'left' %>
+    <% end %>
+    <figure class="kaiwa-img-<%= position %>">
+      <figcaption class="kaiwa-img-description">
+        <%= message.user.nickname %>
+      </figcaption>
+    </figure>
+    <div class="kaiwa-text-<%= position %>">
+      <%= simple_format(message.content) %>
+      <p class = "user-name"><%= message.user.nickname %></p>
+    </div>
+  </div>
+</div>

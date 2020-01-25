@@ -11,13 +11,13 @@
 
   <body>
   <header class="header">
-    <div class="container">
+    <div class="container row">
       <h1 class="grid-6"><a href="/">ECA</a></h1>
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post"%>
           <a class="post" href="/rooms/show">Room</a>
-          <a clsss="mypage" href="/users/show">マイページ</a>
+          <a class="post" href="/users/show">マイページ</a>
         </div>
       <% else %>
         <div class="grid-6">

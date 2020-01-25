@@ -13,4 +13,17 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+@import "bootstrap";
+
+header{
+  background-color: rgb(25, 21, 46);
+  position: fixed;
+  z-index: 2;
+  width:100%;
+}
+
+.post{
+  color:white;
+  font-size: 20px;
+  padding-left: 40px;
+}

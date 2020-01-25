@@ -1,0 +1,13 @@
+<div class="message">
+  <div class="kaiwa">
+    <figure class="kaiwa-img-left">
+      <%= image_tag 'default.jpg' %>
+      <figcaption class="kaiwa-img-description">
+        <%= message.user.email %>
+      </figcaption>
+    </figure>
+    <div class="kaiwa-text-left">
+      <%= simple_format(message.content) %>
+    </div>
+  </div>
+</div>
