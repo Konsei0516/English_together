@@ -3,6 +3,6 @@ class UsersController < ApplicationController
     @user = User.find(current_user[:id])
   end
 
-  def eidt
+  def edit
   end
 end
