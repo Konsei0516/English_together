@@ -1,4 +1,9 @@
 <h1>マイページ</h1>
-<p>名前 :<%= @user.nickname%></p>
-<p>メールアドレス : <%= @user.email %></p>
+<% if @user.id == current_user.id %>
+  <p>名前 :<%= current_user.nickname%></p>
+  <p>メールアドレス : <%= @user.email %></p>
+<% else %>
+  <p>名前 :<%= @user.nickname%></p>
+  <p>メールアドレス : <%= @user.email %></p>
+<% end %>
 
