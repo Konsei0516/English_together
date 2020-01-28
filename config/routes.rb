@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root to: "home#top"
   resources :homes, only: [:top,:about]
   resources :rooms, only: [:show,:index]
+  resources :relationships, only: [:create, :destroy]
   resources :users, only: [:show]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
