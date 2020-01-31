@@ -22,7 +22,7 @@
   z-index: 1;
 }
 
-.App-contents{
+.hero__content{
   color:white;
   position: absolute;
   top: 50%;
@@ -30,10 +30,11 @@
   transform: translate(-50%, -50%);
   font-size: 35px;
   z-index: 1;
+  
 }
 
-.new-user{
-  color: rgb(86, 14, 145);
+.hero__link{
+  color: rgb(235, 231, 41);
   position: absolute;
   top: 60%;
   left: 50%;
