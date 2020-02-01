@@ -31,8 +31,6 @@ body {
   animation-duration:5s;
 }
 
-
-
 h1 {
   font-family:monospace;
 }
@@ -55,9 +53,9 @@ h1 {
   height: 650px;
   padding: 10px;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1500px;
   overflow: scroll;
-  border: blue 1px solid;
+  border: rgb(211, 211, 221) 1px solid;
   background-color:rgb(188, 228, 188);
 }
 /*——————–
@@ -163,20 +161,18 @@ p.kaiwa-text:last-child {
   display: block;
 }
 
-form{
+.form{
   height: 50px;
-  position: relative;
+  width:100%;
 }
 
 .form-group{
-  width:81.3%;
+  width:100%;
   padding-left:205px;
-  
+  display:flex;
 }
 
-.btn{
-  display:block;
-  position: absolute;
-  right:205px;
-  top:0;
+.btn-form{
+  width:80px;
+  height:40px;
 }

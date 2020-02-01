@@ -7,12 +7,12 @@
     <% end %>
     <figure class="kaiwa-img-<%= position %>">
       <figcaption class="kaiwa-img-description">
-        <%= message.user.nickname %>
+        <%= message.user.name %>
       </figcaption>
     </figure>
     <div class="kaiwa-text-<%= position %>">
       <%= simple_format(message.content) %>
-      <p class = "user-name"><%= message.user.nickname %></p>
+      <p class = "user-name"><%= link_to "ユーザーページへ" , "/users/#{message.user_id}" %></p>
     </div>
   </div>
 </div>

@@ -1,4 +1,14 @@
 <h1>マイページ</h1>
-<p>名前 :<%= @user.nickname%></p>
-<p>メールアドレス : <%= @user.email %></p>
-
+<% if @user == current_user %>
+  <p>名前 :<%= current_user.name %></p>
+  <p>メールアドレス : <%= @user.email %></p>
+  <p>プロフィール : <%= @user.profile %></p>
+  <%= render 'follow_form' %>
+  <%= render 'stats' %>
+<% else %>
+  <p>名前 :<%= @user.name %></p>
+  <p>メールアドレス : <%= @user.email %></p>
+  <p>プロフィール : <%= @user.profile %></p>
+  <%= render 'follow_form' %>
+  <%= render 'stats' %>
+<% end %>
