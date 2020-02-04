@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users, controllers:{
     registrations: 'users/registrations'
   }
@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: "home#top"
   resources :homes, only: [:top,:about]
   resources :rooms, only: [:show,:index]
+  resources :words
   resources :users do
     member do
       get :following, :followers
