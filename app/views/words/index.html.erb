@@ -1,2 +1,22 @@
-<h1>Words#index</h1>
-<p>Find me in app/views/words/index.html.erb</p>
+<h1>Word一覧</h1>
+<%= link_to '新規登録', new_word_path, class: 'btn btn-primary' %>
+
+<div class="mb-3">
+<table id="table", class="table-hover">
+  <thead class="thead-default">
+    <tr>
+      <th>Word.human_attribute_name(:name)</th>
+      <th>Word.human_attribute_name(:created_at)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @words.each do |word| %>
+      <tr>
+        <td><%= word.name %></td>
+        <td><%= word.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

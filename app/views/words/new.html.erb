@@ -1,2 +1,19 @@
-<h1>Words#new</h1>
-<p>Find me in app/views/words/new.html.erb</p>
+<h1>タスクの新規登録</h1>
+
+<div class = "nav.justify-content-end">
+  <%= link_to '一覧', words_path, class: 'nav_link'%>
+</div>
+
+<%= form_with model: @word, local: true do |f| %>
+<div class="form-group">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control', id: 'word_name' %>
+</div>
+<div class="form-group">
+  <%= f.label :description %>
+  <%= f.text_area :description, rows: 5,class: 'form-control', id: 'word_description' %>
+</div>
+<%= f.submit nil, class: 'btn btn-primary' %>
+<% end %>
+
+
