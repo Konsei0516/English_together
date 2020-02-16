@@ -17,6 +17,7 @@
         <td><%= link_to word.name, word_path(word) %></td>
         <td><%= word.created_at %></td>
         <td><%= link_to '編集', edit_word_path(word), class: 'btn btn-parimary mr-3' %></td>
+        <td><%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>

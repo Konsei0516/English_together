@@ -27,6 +27,12 @@ class WordsController < ApplicationController
     redirect_to words_url
   end
 
+  def destroy
+    word = Word.find(params[:id])
+    word.destroy
+    redirect_to words_url
+  end
+
   private
   def word_params
     params.require(:word).permit(:name, :description)

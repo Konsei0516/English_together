@@ -28,5 +28,6 @@
   </tbody>
 </table>
 
-<%= link_to "編集", edit_word_path, class: "btn btn-parimary mr-3" %>
+<%= link_to "編集", edit_word_path, class: "btn btn-parimary" %>
+<%= link_to '削除', @word, method: :delete, data:{ confirm: "タスク「#{@word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
 </div>
