@@ -4,15 +4,20 @@ class WordsController < ApplicationController
   end
 
   def show
+    
   end
 
   def new
-    @word = Word.new(word_params)
-    word.save!
-    redirect_to words_url
+    @word = Word.new
   end
 
   def edit
+  end
+
+  def create
+    word = Word.new(word_params)
+    word.save!
+    redirect_to words_url
   end
 
   private

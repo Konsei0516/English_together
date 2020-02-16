@@ -64,4 +64,5 @@ gem 'byebug'
 gem 'redis'
 gem 'redis-rails'
 gem 'redis-namespace'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'rails-i18n'
