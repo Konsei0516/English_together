@@ -7,6 +7,7 @@
     <tr>
       <th>Word.human_attribute_name(:name)</th>
       <th>Word.human_attribute_name(:created_at)</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -15,6 +16,7 @@
       <tr>
         <td><%= link_to word.name, word_path(word) %></td>
         <td><%= word.created_at %></td>
+        <td><%= link_to '編集', edit_word_path(word), class: 'btn btn-parimary mr-3' %></td>
       </tr>
     <% end %>
   </tbody>

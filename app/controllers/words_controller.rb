@@ -12,6 +12,13 @@ class WordsController < ApplicationController
   end
 
   def edit
+    @word = Word.find(params[:id])
+  end
+
+  def update
+    word = Word.find(params[:id])
+    word.update!(word_params)
+    redirect_to word_url
   end
 
   def create
