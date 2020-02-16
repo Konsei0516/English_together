@@ -13,7 +13,7 @@
   <tbody>
     <% @words.each do |word| %>
       <tr>
-        <td><%= word.name %></td>
+        <td><%= link_to word.name, word_path(word) %></td>
         <td><%= word.created_at %></td>
       </tr>
     <% end %>
