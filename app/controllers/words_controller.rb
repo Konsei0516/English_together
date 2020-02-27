@@ -22,9 +22,13 @@ class WordsController < ApplicationController
   end
 
   def create
-    word = Word.new(word_params)
-    word.save!
-    redirect_to words_url
+    @word = Word.new(word_params)
+    
+    if @word.save
+      redirect_to @word
+    else
+      render :new
+    end
   end
 
   def destroy

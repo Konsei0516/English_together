@@ -19,7 +19,7 @@
         <div class="user_nav grid-6">
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post"%>
           <a class="post" href="/rooms/show">Room</a>
-          <!--<a class="post" href="/users/show">マイページ</a>-->
+          <%= link_to 'Mypage', user_path(current_user), class: 'post' %>
           <%= link_to 'Word', words_path, class: 'post' %>
         </div>
       <% else %>

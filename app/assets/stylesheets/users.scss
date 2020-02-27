@@ -164,3 +164,34 @@ a {
       border-radius: 0px;
   }
 }
+
+.main__user{
+  padding:180px 0 1rem;
+  width: 100%;
+  height:auto;
+  text-align: center;
+  background: linear-gradient(to bottom, rgb(25, 210, 185), #5ef4ff);
+  &__top{
+    margin:0 auto;
+    max-width: 1080px;
+    height:auto;
+    &__mypage{
+      font-size:2rem;
+      padding-bottom: 30px;
+    }
+    &__name{
+      font-size:1.4rem;
+      color:#fff;
+    }
+    &__profile{
+      font-size:1.2rem;
+    }
+  }
+}
+
+.main__word{
+  padding:30px;
+  width: 100%;
+  height:auto;
+  text-align: center;
+}
