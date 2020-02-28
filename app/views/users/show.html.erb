@@ -1,14 +1,20 @@
-<h1>マイページ</h1>
-<% if @user == current_user %>
-  <p>名前 :<%= current_user.name %></p>
-  <p>メールアドレス : <%= @user.email %></p>
-  <p>プロフィール : <%= @user.profile %></p>
-  <%= render 'follow_form' %>
-  <%= render 'stats' %>
+<% if current_user.id == @user.id %>
+<div class="main__user">
+  <div class="main__user__top">
+    <h2 class = "main__user__top__mypage">マイページ</h2>
+    <p class="main__user__top__name">name :<%= current_user.name %></p>
+    <p class="main__user__top__profile">profile : <%= current_user.profile %></p>
+    <%= render 'follow_form', class: "follow_form"%>
+    <%= render 'stats', class: "follow_stats" %>
+  </div>
+</div>
 <% else %>
   <p>名前 :<%= @user.name %></p>
-  <p>メールアドレス : <%= @user.email %></p>
   <p>プロフィール : <%= @user.profile %></p>
   <%= render 'follow_form' %>
   <%= render 'stats' %>
 <% end %>
+
+<div class="main__word">
+  <h2>word memory</h2>
+</div>

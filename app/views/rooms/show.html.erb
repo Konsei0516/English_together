@@ -1,20 +1,15 @@
-<div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>
-<div class="content">
-  <h1 class="title-room">Chat room</h1>
-    <div class="chat_box">
-      <div id = "messages">
-        <ul class = "list-group">
-          <%= render @messages %>
-        </ul>
-      </div>
+<div class = "containar">
+  <div class="chat_box">
+    <div id = "messages">
+      <ul class = "list-group">
+        <%= render @messages %>
+      </ul>
     </div>
-      <form class="form">
-        <div class ="form-group">
-          <input type="text" class="form-control" id="chat-input"/>
-          <button id="button" class="btn-form btn-primary">送信</button>
-        </div>
-      </form>
+  </div>
+  <form class="form">
+    <div class ="form-group">
+      <input type="text" class="form-control" id="chat-input"/>
+      <button id="button" class="btn btn-primary">送信</button>
     </div>
+  </form>
 </div>

@@ -1,0 +1,33 @@
+<h1>Word詳細</h1>
+
+<div class ="nav.justify-content-end">
+<%= link_to '一覧', words_path, class: 'nav-link' %>
+
+<table id="table", class="table-hover">
+  <tbody>
+    <tr>
+      <th><%= Word.human_attribute_name(:id) %></td>
+      <td><%= @word.id %></td>
+    </tr>
+    <tr>
+      <th><%= Word.human_attribute_name(:name) %></td>
+      <td><%= @word.name %></td>
+    </tr>
+    <tr>
+      <th><%= Word.human_attribute_name(:description) %></td>
+      <td><%= @word.description %></td>
+    </tr>
+    <tr>
+      <th><%= Word.human_attribute_name(:created_at) %></td>
+      <td><%= @word.created_at %></td>
+    </tr>
+    <tr>
+      <th><%= Word.human_attribute_name(:updated_at) %></td>
+      <td><%= @word.updated_at %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "編集", edit_word_path, class: "btn btn-parimary" %>
+<%= link_to '削除', @word, method: :delete, data:{ confirm: "タスク「#{@word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
+</div>
