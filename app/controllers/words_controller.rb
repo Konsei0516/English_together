@@ -1,10 +1,11 @@
 class WordsController < ApplicationController
+  before_action :set_word, only: [:show,:edit,:update,:destroy]
+
   def index
-    @words = Word.all
+    @words = current_user.words.order(created_at: :desc)
   end
 
   def show
-    @word = Word.find(params[:id])
   end
 
   def new
@@ -12,17 +13,15 @@ class WordsController < ApplicationController
   end
 
   def edit
-    @word = Word.find(params[:id])
   end
 
   def update
-    word = Word.find(params[:id])
     word.update!(word_params)
     redirect_to word_url
   end
 
   def create
-    @word = Word.new(word_params)
+    @word = Word.new(word_params.merge(user_id: current_user.id))
     
     if @word.save
       redirect_to @word
@@ -32,13 +31,16 @@ class WordsController < ApplicationController
   end
 
   def destroy
-    word = Word.find(params[:id])
-    word.destroy
+    @word.destroy
     redirect_to words_url
   end
 
   private
   def word_params
-    params.require(:word).permit(:name, :description)
+    params.require(:word).permit(:name,:description)
+  end
+
+  def set_word
+    @word = current_user.words.find(params[:id])
   end
 end
