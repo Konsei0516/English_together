@@ -4,15 +4,17 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
 
 .hero {
-  background-color: rgb(67, 193, 231);
+  //background-color: rgb(67, 193, 231);
+  background: image-url('top');
   position: relative;
-  height: 100vh;
+  height: 100%;
+  width:100%;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
 }
 
 .hero__title {
-  color: #fff;
+  color: rgb(8, 5, 8);
   position: absolute;
   top: 40%;
   left: 50%;
@@ -34,7 +36,7 @@
 }
 
 .hero__link{
-  color: rgb(235, 231, 41);
+  color: rgb(93, 41, 235);
   position: absolute;
   top: 60%;
   left: 50%;
@@ -42,7 +44,6 @@
   font-size: 35px;
   z-index: 1;
   cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .cube {
@@ -51,13 +52,13 @@
   left: 45vw;
   width: 10px;
   height: 10px;
-  border: solid 1px darken(#0040C1, 8%);
+  border: solid 1px darken(rgb(62, 111, 211), 8%);
   transform-origin: top left;
   transform: scale(0) rotate(0deg) translate(-50%, -50%);
   animation: cube 12s ease-in forwards infinite;
   
   &:nth-child(2n) {
-    border-color: lighten(#0040C1, 10%);
+    border-color: lighten(rgb(43, 134, 196), 10%);
   }
   
   &:nth-child(2) {
