@@ -2,7 +2,7 @@ class WordsController < ApplicationController
   before_action :set_word, only: [:show,:edit,:update,:destroy]
 
   def index
-    @words = current_user.words.order(created_at: :desc)
+    @words = Word.all.order(created_at: :desc)
   end
 
   def show
@@ -16,7 +16,7 @@ class WordsController < ApplicationController
   end
 
   def update
-    word.update!(word_params)
+    @word.update!(word_params)
     redirect_to word_url
   end
 

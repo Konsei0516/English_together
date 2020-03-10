@@ -1,7 +1,9 @@
-<h1>単語の編集</h1>
+<div class="word__main">
+  <h1>単語の編集</h1>
 
-<div class = "nav.justify-content-end">
-  <%= link_to '一覧', words_path, class: 'nav_link'%>
+  <div class = "nav.justify-content-end">
+    <%= link_to '一覧', words_path, class: 'nav_link'%>
+  </div>
+
+  <%= render partial: "form", locals: { word: @word }%>
 </div>
-
-<%= render partial: "form", locals: { word:@word }%>
