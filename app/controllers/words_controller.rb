@@ -1,11 +1,13 @@
 class WordsController < ApplicationController
-  before_action :set_word, only: [:show,:edit,:update,:destroy]
+  before_action :set_word, only: [:edit,:update,:destroy]
 
   def index
-    @words = Word.all.order(created_at: :desc)
+    @words = Word.order(created_at: :desc).page(params[:page]).per(6)
   end
 
   def show
+    @word = Word.find(params[:id])
+    @user = User.find(@word.user_id)
   end
 
   def new

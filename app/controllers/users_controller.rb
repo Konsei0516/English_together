@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     @words = current_user.words.order(created_at: :desc)
+    @words = Word.order(created_at: :desc).page(params[:page]).per(6)
   end
 
   def edit
