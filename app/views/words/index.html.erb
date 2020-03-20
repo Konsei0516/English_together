@@ -3,6 +3,27 @@
     <h2>Word一覧</h2>
     <%= link_to '新規登録', new_word_path, class: 'btn btn-primary' %>
 
-    <%= render partial: "my-index", locals: { word: @word }%>
+    <div class="container">
+      <div class="word__wrapper">
+        <% @words.each do |word| %>
+        <div class="word__wrapper__card">
+          <div class= "word__wrapper__card__title">
+            <%= link_to word.name, word_path(word) %>
+          </div>
+          <div class="word__wrapper__card__description">
+            <%= link_to word.description, word_path(word) %>
+          </div>
+          <div class="word__wrapper__card__name">
+            <%= link_to word.user.name %>
+          </div>
+          <div class ="word__wrapper__card__btn">
+            <%= link_to '編集', edit_word_path(word), class: 'btn btn-success' %>
+            <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
+          </div>
+        </div>
+    <% end %>
+    <%= paginate(@words) %>
+  </div>
+</div>
   </div>
 </div>

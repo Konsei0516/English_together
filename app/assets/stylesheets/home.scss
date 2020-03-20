@@ -18,9 +18,9 @@
 }
 
 .hero__title {
-  color: rgb(194, 64, 194);
+  color: rgb(27, 20, 27);
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 50px;
@@ -29,9 +29,9 @@
 }
 
 .hero__content{
-  color:rgb(199, 98, 219);
+  color:rgb(28, 22, 29);
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 35px;
@@ -40,69 +40,43 @@
 }
 
 .hero__link{
-  color: rgb(93, 41, 235);
   position: absolute;
   top: 60%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   font-size: 35px;
   z-index: 1;
+  display: inline-block;
+  padding: 1rem 3rem;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgb(239, 243, 245), #dde3e6);
+  color: black;
+  font-size: 1.5rem;
+  line-height: 35px;
   cursor: pointer;
+  text-align: center;
 }
 
-.cube {
+.hero__login{
   position: absolute;
-  top: 80vh;
-  left: 45vw;
-  width: 10px;
-  height: 10px;
-  border: solid 1px darken(rgb(62, 111, 211), 8%);
-  transform-origin: top left;
-  transform: scale(0) rotate(0deg) translate(-50%, -50%);
-  animation: cube 12s ease-in forwards infinite;
-  
-  &:nth-child(2n) {
-    border-color: lighten(rgb(43, 134, 196), 10%);
-  }
-  
-  &:nth-child(2) {
-    animation-delay: 2s;
-    left: 25vw;
-    top: 40vh;
-  }
-  
-  &:nth-child(3) {
-    animation-delay: 3s;
-    left: 75vw;
-    top: 40vh;
-  }
-  
-  &:nth-child(4) {
-    animation-delay: 5s;
-    left: 90vw;
-    top: 10vh;
-  }
-  
-  &:nth-child(5) {
-    animation-delay: 8s;
-    left: 10vw;
-    top: 85vh;
-  }
-  
-  &:nth-child(6) {
-    animation-delay: 10s;
-    left: 50vw;
-    top: 10vh;
-  }
-}
-
-@keyframes cube {
-  from {
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);   
-    opacity: 1;
-  }
-  to {
-    transform: scale(20) rotate(960deg) translate(-50%, -50%); 
-    opacity: 0;
-  }
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  z-index: 1;
+  display: inline-block;
+  padding: 1rem 3rem;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, rgb(236, 236, 231), #e6e7e0);
+  color: black;
+  font-size: 1.5rem;
+  line-height: 35px;
+  cursor: pointer;
+  text-align: center;
 }

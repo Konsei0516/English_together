@@ -1,6 +1,6 @@
 <div class="container">
   <div class="word__wrapper">
-    <% @words.each do |word| %>
+    <% @word.each do |word| %>
     <div class="word__wrapper__card">
       <div class= "word__wrapper__card__title">
         <%= link_to word.name, word_path(word) %>
