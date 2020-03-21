@@ -1,0 +1,1 @@
+$('#likes_buttons_<%= @word.id %>').html("<%= j(render partial: 'likes/like',locals:{word: @word})%>");
