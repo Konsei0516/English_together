@@ -17,9 +17,9 @@
   <%= render 'stats' %>
 </div>
 <% end %>
-
-
-<div class="main__word">
-  <h2>word memory</h2>
-  <%= render partial: "words/my-index", locals: { word: @word }%>
-</div>
+<% @likes.each do |like| %>
+  <% word = Word.find_by(id: like.word_id) %>
+  <% user = User.find_by(id: word.user_id) %>
+  <%= link_to(user.name, "/users/#{user.id}" ) %>
+  <%= link_to(word.name, "/word/#{word.id}") %>
+<% end %>

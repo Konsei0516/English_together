@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   
+  get "users/:id/like" => "users#like"
   resources :users do
     member do
       get :following, :followers

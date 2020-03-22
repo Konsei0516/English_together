@@ -5,7 +5,7 @@
       <div class="vertical_like">
         <i class="material-icons red-text">favorite</i>
         <span class="red-text">
-          <%= word.likes_count %>
+          いいね<%= word.likes_count %>
         </span>
       </div>
     <% end %>
@@ -14,7 +14,7 @@
       <div class="vertical_like">
         <i class="material-icons grey-text text-darken-2">favorite_border</i>
         <span class="grey-text text-darken-2">
-          <%= word.likes_count %>
+          いいね<%= word.likes_count %>
         </span>
       </div>
     <% end %>
@@ -26,14 +26,14 @@
     <div class="vertical_like">
       <i class="material-icons red-text">favorite</i>
       <span class="red-text">
-        <%= word.likes_count %>
+        いいね<%= word.likes_count %>
       </span>
     </div>
   <% else %>
     <div class="vertical_like">
-      <i class="material-icons grey-text text-darken-2">favorite_border</i>
+      <i class="material-icons grey-text text-darken-2">favorite_border<%= word.likes_count %></i>
       <span class="grey-text text-darken-2">
-        <%= word.likes_count %>
+        いいね<%= word.likes_count %>
       </span>
     </div>
   <% end %>

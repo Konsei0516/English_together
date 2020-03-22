@@ -19,4 +19,9 @@ class UsersController < ApplicationController
     @users = @user.followers
     render 'show_follower'
   end
+
+  def like
+    @user = User.find_by(id: params[:id])
+    @likes = Like.where(user_id: @user.id)
+  end
 end
