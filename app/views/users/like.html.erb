@@ -17,9 +17,28 @@
   <%= render 'stats' %>
 </div>
 <% end %>
-<% @likes.each do |like| %>
-  <% word = Word.find_by(id: like.word_id) %>
-  <% user = User.find_by(id: word.user_id) %>
-  <%= link_to(user.name, "/users/#{user.id}" ) %>
-  <%= link_to(word.name, "/word/#{word.id}") %>
-<% end %>
+
+<div class="word__main">
+  <div class="word__main__box">
+  <h2 class = "main__user__top__mypage">いいね一覧</h2>
+    <div class="container">
+      <div class="word__wrapper">
+        <% @likes.each do |like| %>
+          <div class="word__wrapper__card">
+            <% word = Word.find_by(id: like.word_id) %>
+            <% user = User.find_by(id: word.user_id) %>
+            <div class= "word__wrapper__card__title">
+              <%= link_to(word.name, "/word/#{word.id}") %>
+            </div>
+            <div class="word__wrapper__card__description">
+              <%= link_to(word.description, "/word/#{word.id}") %>
+            </div>
+            <div class="word__wrapper__card__name">
+              <%= link_to(user.name, "/users/#{user.id}" ) %>    
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <div>
+  </div>
+</div>
