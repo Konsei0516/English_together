@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'comments/create'
+  get 'comments/destroy'
   get 'likes/create'
   get 'likes/destroy'
   devise_for :users, controllers:{
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   resources :homes, only: [:top,:about]
   resources :rooms, only: [:show,:index]
   resources :words do
+    resources :comments, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
   end
   

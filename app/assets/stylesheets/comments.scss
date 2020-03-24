@@ -1,0 +1,10 @@
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  a {
+    color: rgb(87, 214, 155);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
