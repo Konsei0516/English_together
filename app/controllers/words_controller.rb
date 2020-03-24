@@ -8,6 +8,7 @@ class WordsController < ApplicationController
   def show
     @word = Word.find(params[:id])
     @user = User.find(@word.user_id)
+    @comment = Comment.new
     @comments = @word.comments.includes(:user)
   end
 
