@@ -1,19 +1,19 @@
 Rails.application.routes.draw do
-
-  get 'comments/create'
-  get 'comments/destroy'
-  get 'likes/create'
-  get 'likes/destroy'
   devise_for :users, controllers:{
     registrations: 'users/registrations'
   }
   
   root to: "home#top"
   resources :homes, only: [:top,:about]
+  
   resources :rooms, only: [:show,:index]
+
   resources :words do
     resources :comments, only: [:create, :destroy]
     resources :likes, only: [:create, :destroy]
+    collection do 
+      get 'search'
+    end
   end
   
   get "users/:id/like" => "users#like"

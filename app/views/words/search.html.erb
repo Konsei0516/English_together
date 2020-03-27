@@ -1,0 +1,6 @@
+<div class="word__main">
+  <%= form_with(url: search_words_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "Wordを検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+</div>

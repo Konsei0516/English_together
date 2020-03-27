@@ -39,6 +39,14 @@ class WordsController < ApplicationController
     redirect_to words_url
   end
 
+  def search
+    @words = Word.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
   def word_params
     params.require(:word).permit(:name,:description)
