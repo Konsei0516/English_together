@@ -28,4 +28,24 @@
   <%= link_to "編集", edit_word_path, class: "btn btn-primary" %>
   <%= link_to '削除', @word, method: :delete, data:{ confirm: "タスク「#{@word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
   </div>
+  <div class="container"> 
+    <!-- ここからフォーム -->
+    <% if current_user %>
+      <%= form_tag("/words/#{@word.id}/comments", method: :post, id: "new_comment") do %>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="2" class="textbox"></textarea>
+        <input type="submit" value="SENT" class="form__submit">
+      <% end %>
+    <% end %>
+  </div>
+  <div class="comments">   
+    <h4>コメント一覧</h4>
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+          <%= comment.text %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
 </div>
