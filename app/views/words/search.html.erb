@@ -1,10 +1,37 @@
+<%= render 'link/header'%>
+<div class="main__index">
+  <h2>検索結果</h2>
+  <div class="main__index__box">
+    <%= link_to '新規登録', new_word_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+
 <div class="word__main">
-  <div class = "word__main__box">
-    <%= form_with(url: search_words_path, local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "Wordを検索する", class: "search-input" %>
-      <%= form.submit "検索", class: "search-btn" %>
-    <% end %>
-    <div class="word-search-result">
+<%= render "search" %>
+  <div class="word__main__box">
+    <div class="container">
+      <div class="word__wrapper">
+        <% @words.each do |word| %>
+        <div class="word__wrapper__card">
+          <div class= "word__wrapper__card__title">
+            <%= link_to word.name, word_path(word) %>
+          </div>
+          <div class="word__wrapper__card__description">
+            <%= link_to word.description, word_path(word) %>
+          </div>
+          <div class="word__wrapper__card__name">
+            <%= link_to word.user.name %>
+          </div>
+          <div id="likes_buttons_<%= word.id %>">
+            <%= render partial: 'likes/like', locals: { word: word, likes: @likes} %>
+          </div>
+          <div class ="word__wrapper__card__btn">
+            <%= link_to '編集', edit_word_path(word), class: 'btn btn-success' %>
+            <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
+          </div>
+        </div>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -10,40 +10,6 @@
   </head>
 
   <body>
-  <header class="header">
-    <div class="container row">
-      <% if user_signed_in? %>
-        <div class="user_nav grid-6">
-          <ul class="header__list">
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__contents"%></li>
-            <li><%= link_to 'Mypage', user_path(current_user), class: 'header__name' %></li>
-          </ul>
-        </div>
-      <% else %>
-        <div class="grid-6">
-          <%= link_to "ログイン", new_user_session_path, class: 'header__contents' %>
-          <%= link_to "新規登録", new_user_registration_path, class: 'header__name' %>
-        </div>
-      <% end %>
-    <div id="nav-container">
-      <div class="bg"></div>
-      <div class="button" tabindex="0">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div id="nav-content" tabindex="0">
-      <ul>
-        <li><a class="post" href="/">Home</a></li>
-        <li><a class="post" href="/rooms/show">Room</a></li>
-        <li><%= link_to 'Word', words_path, class: 'post' %></li>
-        <li><%= link_to 'Search', search_words_path, class: 'post' %></li>
-      </ul>
-    </div>
-    </div>
-  </header>
-    <div class="notice"><%= notice %></div>
-    <div class="alert"><%= alert %></div>
     <%= yield %>
   </body>
 </html>

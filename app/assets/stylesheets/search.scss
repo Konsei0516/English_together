@@ -1,13 +1,37 @@
+.search{
+  width:500px;
+  margin:0 auto;
+}
+
+.word__serach{
+  padding-top:24px;
+}
+
+.search-form{
+  width:100%;
+}
+.search-input{
+  border: 1px solid rgb(40, 54, 54);
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.search-btn{
+  background:#3CCACE;
+  color:white;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
 .word-search-result{
   position: absolute;
   width: 500px;
   z-index: 1;
   .search-result{
     background-color: white;
-    padding: 0 0 0 5px;
     height: 35px;
     line-height: 35px;
-    border-bottom: solid 1px yellowgreen;
     a{
       color: black;
     }

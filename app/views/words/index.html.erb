@@ -1,8 +1,14 @@
-<div class="word__main">
-  <div class="word__main__box">
-    <h2>Word一覧</h2>
+<%= render 'link/header'%>
+<div class="main__index">
+  <h2>Word 投稿一覧</h2>
+  <div class="main__index__box">
     <%= link_to '新規登録', new_word_path, class: 'btn btn-primary' %>
+  </div>
+</div>
 
+<div class="word__main">
+<%= render "search" %>
+  <div class="word__main__box">
     <div class="container">
       <div class="word__wrapper">
         <% @words.each do |word| %>
@@ -24,9 +30,9 @@
             <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
           </div>
         </div>
-    <% end %>
+      <% end %>
     <%= paginate(@words) %>
-  </div>
-</div>
+      </div>
+    </div>
   </div>
 </div>

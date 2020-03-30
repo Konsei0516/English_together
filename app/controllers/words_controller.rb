@@ -28,7 +28,7 @@ class WordsController < ApplicationController
     @word = Word.new(word_params.merge(user_id: current_user.id))
     
     if @word.save
-      redirect_to @word
+      redirect_to words_path, notice:"投稿しました"
     else
       render :new
     end
@@ -36,7 +36,7 @@ class WordsController < ApplicationController
 
   def destroy
     @word.destroy
-    redirect_to words_url
+    redirect_to words_url,notice:"削除しました"
   end
 
   def search
