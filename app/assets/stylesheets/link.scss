@@ -1,0 +1,46 @@
+.header{
+  background: linear-gradient(to bottom,  #39a3aa);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width:100%;
+}
+
+.user_nav{
+  margin:0 0 0 auto;
+}
+
+ul li{ 	
+  display: inline;
+}
+
+.header__contents{
+  display:inline;
+  color:white;
+  font-size: 16px;
+  padding:20px;
+  position: absolute;
+  right: 120px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+.header__name{
+  display:inline;
+  color:white;
+  font-size: 16px;
+  padding:20px;
+  position: absolute;
+  right: 40px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+.post{
+  color:white;
+  font-size: 20px;
+}
