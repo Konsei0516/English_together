@@ -6,6 +6,16 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to user_path(@user.id)
+    else
+    render :edit
+    end
   end
 
   def following
@@ -23,5 +33,11 @@ class UsersController < ApplicationController
   def like
     @user = User.find_by(id: params[:id])
     @likes = Like.where(user_id: @user.id)
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :email, :profile, :image)
   end
 end

@@ -1,0 +1,9 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.image? %>
+    <%= image_tag @user.image.url %>
+  <% else %>
+    <%= image_tag("/images/no-image.png") %>
+  <% end %>
+  <%= f.file_field :image %>
+  <%= f.submit 'プロフィール編集を完了する', class: 'btn btn-primary' %>
+<% end %>
