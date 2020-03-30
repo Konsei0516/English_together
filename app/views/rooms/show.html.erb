@@ -1,15 +1,17 @@
-<div class = "containar">
-  <div class="chat_box">
-    <div id = "messages">
-      <ul class = "list-group">
-        <%= render @messages %>
-      </ul>
+<div class="chat">
+  <div class = "containar">
+    <div class="chat_box">
+      <div id = "messages">
+        <ul class = "list-group">
+          <%= render @messages %>
+        </ul>
+      </div>
     </div>
+    <form class="form">
+      <div class ="form-group">
+        <input type="text" class="form-control" id="chat-input"/>
+        <button id="button__chat" class="btn btn-primary">送信</button>
+      </div>
+    </form>
   </div>
-  <form class="form">
-    <div class ="form-group">
-      <input type="text" class="form-control" id="chat-input"/>
-      <button id="button__chat" class="btn btn-primary">送信</button>
-    </div>
-  </form>
 </div>

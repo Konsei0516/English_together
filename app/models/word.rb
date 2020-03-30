@@ -9,5 +9,11 @@ class Word < ApplicationRecord
     likes.find_by(user_id: user_id)
   end
 
+  def self.search(input)
+    return nil if input == ""
+    Word.where(['name LIKE ?', "%#{input}%"] ).limit(10)
+  end
+
+
   scope :recent, ->{order(created_at: :desc)}
 end

@@ -1,30 +1,24 @@
+<%= render 'link/header'%>
 <div class="word__main">
   <h2>Word詳細</h2>
 
   <div class ="word__main__box">
   <%= link_to '一覧', words_path, class: 'nav-link' %>
 
-    <table class="word__main__box__index__kind">
-      <tbody class="word__main__box__index__kind__label">
-        <tr>
-          <th><%= Word.human_attribute_name(:name) %></td>
-          <td><%= @word.name %></td>
-        </tr>
-        <tr>
-          <th><%= Word.human_attribute_name(:description) %></td>
-          <td><%= @word.description %></td>
-        </tr>
-        <tr>
-          <th><%= Word.human_attribute_name(:created_at) %></td>
-          <td><%= @word.created_at %></td>
-        </tr>
-        <tr>
-          <th><%= Word.human_attribute_name(:updated_at) %></td>
-          <td><%= @word.updated_at %></td>
-        </tr>
-      </tbody>
-    </table>
-
+  <div class="word__wrapper__card">
+    <div class= "word__wrapper__card__title">
+      <%= link_to @word.name, word_path(@word) %>
+    </div>
+    <div class="word__wrapper__card__description">
+      <%= link_to @word.description, word_path(@word) %>
+    </div>
+    <div class="word__wrapper__card__name">
+      <%= link_to @word.user.name %>
+    </div>
+    <div id="likes_buttons_<%= @word.id %>">
+      <%= render partial: 'likes/like', locals: { word: @word, likes: @likes} %>
+  </div>
+  
   <%= link_to "編集", edit_word_path, class: "btn btn-primary" %>
   <%= link_to '削除', @word, method: :delete, data:{ confirm: "タスク「#{@word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
   </div>
