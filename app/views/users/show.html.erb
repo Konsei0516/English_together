@@ -15,7 +15,7 @@
     <%= render 'follow_form', class: "follow_form"%>
     <%= render 'stats', class: "follow_stats" %>
     <%= link_to("いいね!", "/users/#{@user.id}/like") %>
-    <%= link_to "編集", edit_user_path(@user)%>
+    <%= fa_icon("edit") %><%= link_to "編集", edit_user_path(@user)%>
   </div>
 </div>
 <% else %>
