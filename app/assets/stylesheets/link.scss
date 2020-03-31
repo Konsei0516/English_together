@@ -63,3 +63,22 @@ ul li{
   color:white;
   font-size: 20px;
 }
+
+.word__sent {
+  width: 120px;
+  background: #3CCACE;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  z-index: 2;
+  &__txt {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+}

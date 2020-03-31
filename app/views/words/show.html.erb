@@ -4,34 +4,28 @@
 
   <div class ="word__main__box">
   <%= link_to '一覧', words_path, class: 'nav-link' %>
-
-  <div class="word__wrapper__card">
-    <div class= "word__wrapper__card__title">
-      <%= link_to @word.name, word_path(@word) %>
+    <div class="word__wrapper__card">
+      <div class= "word__wrapper__card__title">
+        <%= link_to @word.name, word_path(@word) %>
+      </div>
+      <div class="word__wrapper__card__description">
+        <%= link_to @word.description, word_path(@word) %>
+      </div>
+      <div class="word__wrapper__card__name">
+        <%= link_to @word.user.name %>
+      </div>
+      <div id="likes_buttons_<%= @word.id %>">
+        <%= render partial: 'likes/like', locals: { word: @word, likes: @likes} %>
     </div>
-    <div class="word__wrapper__card__description">
-      <%= link_to @word.description, word_path(@word) %>
+    <% if current_user == @user %>
+    <div class ="word__wrapper__card__btn">
+      <%= link_to "編集", edit_word_path, class: "btn btn-primary" %>
+      <%= link_to '削除', @word, method: :delete, data:{ confirm: "タスク「#{@word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
     </div>
-    <div class="word__wrapper__card__name">
-      <%= link_to @word.user.name %>
-    </div>
-    <div id="likes_buttons_<%= @word.id %>">
-      <%= render partial: 'likes/like', locals: { word: @word, likes: @likes} %>
-  </div>
-  
-  <%= link_to "編集", edit_word_path, class: "btn btn-primary" %>
-  <%= link_to '削除', @word, method: :delete, data:{ confirm: "タスク「#{@word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
-  </div>
-  <div class="container"> 
-    <!-- ここからフォーム -->
-    <% if current_user %>
-      <%= form_tag("/words/#{@word.id}/comments", method: :post, id: "new_comment") do %>
-        <textarea cols="30" name="text" placeholder="コメントする" rows="2" class="textbox"></textarea>
-        <input type="submit" value="SENT" class="form__submit">
-      <% end %>
     <% end %>
   </div>
-  <div class="comments">   
+
+  <div class="comments">
     <h4>コメント一覧</h4>
     <% if @comments %>
       <% @comments.each do |comment| %>
@@ -39,6 +33,14 @@
           <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
           <%= comment.text %>
         </p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="container"> 
+    <% if current_user %>
+      <%= form_tag("/words/#{@word.id}/comments", method: :post, id: "new_comment") do %>
+        <textarea cols="30" name="text" placeholder="コメントする" rows="2" class="form__textbox"></textarea>
+        <input type="submit" value="SENT" class="form__submit">
       <% end %>
     <% end %>
   </div>
