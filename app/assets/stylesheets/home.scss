@@ -4,39 +4,35 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
 
 .hero {
-  //background-color: rgb(67, 193, 231);
   background: image-url('top');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   position: relative;
-  height: 100vh;
+  height: 100%;
   width:100%;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
-
-}
-
-.hero__title {
-  color: rgb(27, 20, 27);
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 50px;
-  z-index: 1;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.hero__content{
-  color:rgb(28, 22, 29);
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 35px;
-  z-index: 1;
-  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 4.8%;
+  position: fixed;
+  &__box{
+    padding-top:130px;
+    &__title{
+      color: rgb(44, 23, 230);
+      margin:10px 0 42px;
+      font-size: 5rem;
+      z-index: 1;
+      font-family: 'Montserrat', sans-serif;
+    }
+    &__content{
+      color:rgb(28, 13, 238);
+      margin:10px 0 42px;
+      font-size: 4rem;
+      z-index: 1;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
 }
 
 .hero__link{
@@ -52,8 +48,8 @@
   outline: none;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(to right, rgb(239, 243, 245), #dde3e6);
-  color: black;
+  background: linear-gradient(to right, rgb(67, 164, 212), #40ccdf);
+  color: rgb(248, 248, 246);
   font-size: 1.5rem;
   line-height: 35px;
   cursor: pointer;

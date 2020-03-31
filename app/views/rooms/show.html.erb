@@ -1,3 +1,6 @@
+<div>
+  <%= render 'link/header'%>
+<div>
 <div class="chat">
   <div class = "containar">
     <div class="chat_box">
@@ -7,11 +10,11 @@
         </ul>
       </div>
     </div>
-    <form class="form">
-      <div class ="form-group">
-        <input type="text" class="form-control" id="chat-input"/>
-        <button id="button__chat" class="btn btn-primary">送信</button>
-      </div>
-    </form>
   </div>
 </div>
+<footer class="form">
+  <div class ="bms__send">
+    <input type="text" class="bms__send__message" id="chat-input"/>
+    <button id="button__chat" class="bms__btn__send">送信</button>
+  </div>
+</footer>

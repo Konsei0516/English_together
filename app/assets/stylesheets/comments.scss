@@ -8,3 +8,24 @@
     }
   }
 }
+
+.form__submit{
+  font-size: 18px;
+  line-height: 48px;
+  background: #3CCACE;
+  border: 1px solid #3CCACE;
+  color: #fff;
+  width: 50%;
+  border-radius: 100px;
+}
+
+.form__textbox{
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+
+textarea {
+  width: 50%;
+  min-height: 104px;
+  padding: 10px;
+}

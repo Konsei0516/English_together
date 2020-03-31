@@ -1,8 +1,16 @@
+<%= render 'link/header'%>
 <div class="hero"> 
-  <div class="hero__title">Let`s English Tark</div>
-  <p class="hero__content">英会話を楽しもう</p>
-  <div>
+  <div class="hero__box">
+    <h2 class="hero__box__title">Let`s English Tark</h2>
+    <p class="hero__box__content">英会話を楽しもう</p>
+  </div>
+  <div class="hero__list">
+  <% if user_signed_in? %>
+    <%= link_to 'ROOMへ', 'rooms/show', class: "hero__link" %>
+    <%= link_to '投稿を見る', words_path, class: "hero__login" %>
+  <% else %>
     <%= link_to '新規登録', '/users/sign_up', class: "hero__link" %>
     <%= link_to 'ログイン', '/users/sign_in', class: "hero__login" %>
+  <% end %>
   </div>
 </div>

@@ -3,6 +3,13 @@
 <div class="main__user">
   <div class="main__user__top">
     <h2 class = "main__user__top__mypage">マイページ</h2>
+    <div class="main__user__top__image">
+      <% if @user.image? %>
+        <div class="main__user__top__image__box"><%= image_tag @user.image.url %></div>
+      <% else %>
+        <%= image_tag("/images/no-image.png") %>
+      <% end %>
+    </div>
     <p class="main__user__top__name">name :<%= current_user.name %></p>
     <p class="main__user__top__profile">profile : <%= current_user.profile %></p>
     <%= render 'follow_form', class: "follow_form"%>

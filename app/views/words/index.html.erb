@@ -1,9 +1,6 @@
 <%= render 'link/header'%>
 <div class="main__index">
-  <h2>Word 投稿一覧</h2>
-  <div class="main__index__box">
-    <%= link_to '新規登録', new_word_path, class: 'btn btn-primary' %>
-  </div>
+  <h2>＜ーーWord 投稿一覧ーー＞</h2>
 </div>
 
 <div class="word__main">
@@ -26,13 +23,16 @@
             <%= render partial: 'likes/like', locals: { word: word, likes: @likes} %>
           </div>
           <div class ="word__wrapper__card__btn">
+          <% if current_user.id == word.user.id %>
             <%= link_to '編集', edit_word_path(word), class: 'btn btn-success' %>
             <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
+          <% end %>
           </div>
         </div>
       <% end %>
-    <%= paginate(@words) %>
       </div>
+      <%= paginate(@words) %>
     </div>
   </div>
 </div>
+<%= render 'link/word'%>
