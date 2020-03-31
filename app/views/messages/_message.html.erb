@@ -6,6 +6,11 @@
       <% position = 'left' %>
     <% end %>
     <figure class="kaiwa-img-<%= position %>">
+      <% if message.user.image? %>
+        <%= image_tag message.user.image.url %>
+      <% else %>
+        <%= image_tag("no-image.png") %>
+      <% end %>
       <figcaption class="kaiwa-img-description">
         <%= message.user.name %>
       </figcaption>

@@ -4,7 +4,7 @@
       <div class="user_nav grid-6">
         <ul class="header__list">
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__contents"%></li>
-          <li><%= link_to 'Mypage', user_path(current_user), class: 'header__name' %></li>
+          <li><%= link_to current_user.name, user_path(current_user), class: 'header__name' %></li>
         </ul>
       </div>
     <% else %>

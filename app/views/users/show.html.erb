@@ -11,11 +11,11 @@
       <% end %>
     </div>
     <p class="main__user__top__name">name :<%= current_user.name %></p>
+    <%= fa_icon("edit") %><%= link_to "編集", edit_user_path(@user)%>
     <p class="main__user__top__profile">profile : <%= current_user.profile %></p>
     <%= render 'follow_form', class: "follow_form"%>
     <%= render 'stats', class: "follow_stats" %>
     <%= link_to("いいね!", "/users/#{@user.id}/like") %>
-    <%= fa_icon("edit") %><%= link_to "編集", edit_user_path(@user)%>
   </div>
 </div>
 <% else %>

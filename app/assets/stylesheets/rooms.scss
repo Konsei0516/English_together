@@ -24,7 +24,20 @@ h1 {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+}
 
+.morning{
+  background: image-url('sky');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.night{
+  background: image-url('night');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 /*——————–
 吹き出しを作る
@@ -79,7 +92,7 @@ h1 {
   margin-right: 80px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #3bc59c;
+  background-color: #9cd6e7;
   margin-left: 12%;
   float: right;
   word-break: break-all;

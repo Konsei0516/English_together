@@ -1,7 +1,11 @@
 <div class="message">
   <div class="kaiwa">
     <figure class="kaiwa-img-right">
-      <%= image_tag 'default.jpg' %>
+      <% if message.user.image? %>
+        <%= image_tag message.user.image.url %>
+      <% else %>
+        <%= image_tag("no-image.png") %>
+      <% end %>
       <figcaption class="kaiwa-img-description">
         <%= message.user.email %>
       </figcaption>
