@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
 .header{
   background: linear-gradient(to bottom,  #39a3aa);
   position: fixed;
@@ -22,9 +24,25 @@ ul li{
   position: absolute;
   right: 120px;
   padding: 0 20px;
-  font-size: 1.1rem;
   line-height: 80px;
   cursor: pointer;
+}
+
+.header__title{
+  display:inline;
+  color:white;
+  font-size: 36px;
+  padding:20px;
+  position: absolute;
+  right: 540px;
+  padding: 0 20px;
+  line-height: 80px;
+  margin:0 auto;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  &:hover{
+    color:rgb(177, 53, 177);
+  }
 }
 
 .header__name{
@@ -38,6 +56,7 @@ ul li{
   font-size: 1.1rem;
   line-height: 80px;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .post{

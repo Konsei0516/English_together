@@ -67,7 +67,7 @@
 
 //ユーザーマイページ
 .main__user{
-  padding:170px 0 1rem;
+  padding:100px 0 1rem;
   width: 100%;
   height:auto;
   text-align: center;
@@ -93,13 +93,39 @@
         width: 300px;
         height:300px;
       }
-      }
+    }
     &__name{
       font-size:1.4rem;
       color:#fff;
+      padding-top:8px;
     }
     &__profile{
-      font-size:1.2rem;
+      font-size:1.5rem;
+      margin:20px;
+    }
+    &__like{
+      font-size: 2rem;
+      margin:20px;
+      &:hover {
+        text-shadow: 0 5px 5px #b388ff;
+        transition: .3s;
+        transform: translateY(-3px);
+      }
+    }
+    &__list{
+      display: flex;  
+      align-items: flex-end;
+      justify-content: space-around;
+      margin: 4rem auto 0;
+      width: 90%;
+      li {
+        margin-right: 1.6rem;
+        &__stutas {
+          color: white;
+          letter-spacing: 2px;
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 }
@@ -109,8 +135,4 @@
   width: 100%;
   height:auto;
   text-align: center;
-}
-
-.fas{
-  font-weight: 900;
 }

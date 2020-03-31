@@ -2,7 +2,7 @@ class WordsController < ApplicationController
   before_action :set_word, only: [:edit,:update,:destroy]
 
   def index
-    @words = Word.order(created_at: :desc).page(params[:page]).per(6)
+    @words = Word.order(created_at: :desc).page(params[:page]).per(9)
   end
 
   def show
