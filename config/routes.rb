@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   
   get "users/:id/like" => "users#like"
   resources :users do
+    collection do 
+      get 'user_search'
+    end
     member do
       get :following, :followers
     end

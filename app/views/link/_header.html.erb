@@ -3,6 +3,7 @@
     <% if user_signed_in? %>
       <div class="user_nav grid-6">
         <ul class="header__list">
+          <li><%= link_to "ユーザー一覧", users_path, class: 'header__users' %></li>
           <li><%= link_to "English together", root_path, class: 'header__title' %></li>
           <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__contents"%></li>
           <li><%= link_to current_user.name, user_path(current_user), class: 'header__name' %></li>
