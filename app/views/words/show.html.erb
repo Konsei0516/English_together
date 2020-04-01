@@ -29,10 +29,17 @@
     <h4>コメント一覧</h4>
     <% if @comments %>
       <% @comments.each do |comment| %>
-        <p>
-          <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
-          <%= comment.text %>
-        </p>
+        <div class="comments__text" data-comment-id= "<%= comment.id %>">
+          <p>
+            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+            <% if user_signed_in? && comment.user_id == current_user.id %>
+              <%= link_to "削除", class: "comment-destroy" do %>
+                <%= fa_icon("times-circle") %>
+              <% end %>
+            <% end %>
+          </p>
+        </div>
       <% end %>
     <% end %>
   </div>
