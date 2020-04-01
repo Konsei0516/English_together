@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: "home#top"
   resources :homes, only: [:top,:about]
   
-  resources :rooms, only: [:show,:index]
+  resources :rooms, only: [:show]
 
   resources :words do
     resources :comments, only: [:create, :destroy]
