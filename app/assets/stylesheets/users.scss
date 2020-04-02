@@ -139,10 +139,9 @@
 
 //ユーザーの一覧
 .user__main {
-  padding:7rem;
+  padding:4rem;
   text-align: center;
-  display: flex;
-  &__content {
+  &__box {
     margin:0 auto;
     max-width: 1080px;
     height: auto;
@@ -169,4 +168,8 @@
   :hover {
     color: rgb(46, 211, 161);
   }
+}
+
+.search-box{
+  padding-bottom:40px;
 }

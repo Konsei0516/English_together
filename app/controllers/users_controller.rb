@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.page(params[:page]).per(8).order("created_at ASC")
+    @users = User.page(params[:page]).per(9).order("created_at ASC").where.not(id: current_user.id)
   end
 
   def show
@@ -40,6 +40,7 @@ class UsersController < ApplicationController
   end
 
   def user_search
+    @users = User.search(params[:search])
   end
 
   private
