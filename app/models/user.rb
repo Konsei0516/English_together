@@ -18,6 +18,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :profile, length: {maximum: 200}
 
+  #フォロー
   def following?(other_user)
     following_relationships.find_by(following_id: other_user.id)
   end
@@ -28,5 +29,14 @@ class User < ApplicationRecord
 
   def unfollow!(other_user)
     following_relationships.find_by(following_id: other_user.id).destroy
+  end
+
+  #ユーザー検索
+  def self.search(search) #ここでのself.はUser.を意味する
+    if search
+      where(['name LIKE ?', "%#{search}%"]) #検索とnameの部分一致を表示。User.は省略
+    else
+      all
+    end
   end
 end

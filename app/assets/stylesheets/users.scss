@@ -136,3 +136,40 @@
   height:auto;
   text-align: center;
 }
+
+//ユーザーの一覧
+.user__main {
+  padding:4rem;
+  text-align: center;
+  &__box {
+    margin:0 auto;
+    max-width: 1080px;
+    height: auto;
+  }
+}
+
+.follow-list {
+  display: inline-block;
+  background-color: #FFFFFF;
+  line-height: 60px;
+  width: 255px;
+  margin: 0 15px 30px;
+  padding-top: 20px;
+  font-size: 24px;
+  border: solid 1px #EEEEEE;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  &__name {
+    color: #444444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  :hover {
+    color: rgb(46, 211, 161);
+  }
+}
+
+.search-box{
+  padding-bottom:40px;
+}

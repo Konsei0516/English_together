@@ -1,12 +1,15 @@
 $(window).on('turbolinks:load',function(){
 $(function(){
   function buildHTML(comment){
-    var html = `<p>
-                  <strong>
-                    <a href = /users/${comment.user_id}>${comment.user_name}</a>
-                  </strong>:
-                  ${comment.text}
-                </p>`
+    var html = `<div class="comments__text" data-comment-id="${comment.id}">
+                  <p>
+                    <strong>
+                      <a href = /users/${comment.user_id}>${comment.user_name}</a>
+                    </strong>:
+                    ${comment.text}
+                    <a class="comment-destroy" href=""><i class="fa fa-times-circle"></i></a>
+                  </p>
+                </div>`
     return html;
   }
   $('#new_comment').on('submit',function(e){

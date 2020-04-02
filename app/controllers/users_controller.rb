@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.page(params[:page]).per(9).order("created_at ASC").where.not(id: current_user.id)
+  end
+
   def show
     @user = User.find_by(id: params[:id])
     @word = @user.words.order(created_at: :desc)
@@ -33,6 +37,14 @@ class UsersController < ApplicationController
   def like
     @user = User.find_by(id: params[:id])
     @likes = Like.where(user_id: @user.id)
+  end
+
+  def user_search
+    @users = User.search(params[:search])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   private

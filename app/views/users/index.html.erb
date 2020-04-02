@@ -1,0 +1,24 @@
+<%= render 'link/header'%>
+<div class="main__index">
+  <h2>＜User 一覧＞</h2>
+</div>
+<div class="user__main">
+  <div class="user__main__box">
+    <div class="search-box">
+      <%= render "search_form" %>
+    </div>
+    <% @users.each do |user| %>
+      <div class="follow-list">
+        <%= link_to user_path(user) do %>
+          <% if user.image.present? %>
+            <%= image_tag "#{user.image.url}", class: "main__user__top__image", size: "100x100" %>
+          <% else %>
+            <%= image_tag "no-image.png", class: "main__user__top__image",size: "100x100" %>
+          <% end %>
+          <p class="follow-list__name"><%= user.name %></p>
+        <% end %>
+      </div>
+    <% end %>
+    <%= paginate(@users) %>
+  </div>
+</div>

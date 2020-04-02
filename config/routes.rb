@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: "home#top"
   resources :homes, only: [:top,:about]
   
-  resources :rooms, only: [:show,:index]
+  resources :rooms, only: [:show]
 
   resources :words do
     resources :comments, only: [:create, :destroy]
@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   
   get "users/:id/like" => "users#like"
   resources :users do
+    collection do 
+      get 'user_search'
+    end
     member do
       get :following, :followers
     end

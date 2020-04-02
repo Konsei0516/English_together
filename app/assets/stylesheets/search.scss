@@ -7,16 +7,19 @@
   padding-top:24px;
 }
 
-.search-form{
+.search-form,
+.search-form__user{
   width:100%;
 }
-.search-input{
+.search-input,
+.search-input__user{
   border: 1px solid rgb(40, 54, 54);
   padding: 10px 30px;
   border-radius: 10px;
 }
 
-.search-btn{
+.search-btn,
+.search-btn__user{
   background:#3CCACE;
   color:white;
   display: inline-block;
@@ -24,11 +27,13 @@
   border-radius: 10px;
 }
 
-.word-search-result{
+.word-search-result,
+.user-search-result{
   position: absolute;
   width: 500px;
   z-index: 1;
-  .search-result{
+  .search-result,
+  .search-result__user{
     background-color: white;
     height: 35px;
     line-height: 35px;
@@ -37,3 +42,4 @@
     }
   }
 }
+
