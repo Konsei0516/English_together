@@ -8,7 +8,7 @@
   <div class="word__main__box">
     <div class="container">
       <div class="index__rank">
-        <h2>いいねランキング</h2>
+        <h2>ーーーーー いいねランキング ーーーーー</h2>
       </div>
     <%= render "like_rank"%>
       <h2>ーーーーーーー 新着 ーーーーーーーー</h2>
@@ -22,7 +22,7 @@
             <%= link_to word.description, word_path(word) %>
           </div>
           <div class="word__wrapper__card__name">
-            <%= link_to word.user.name %>
+            <%= link_to word.user.name, user_path(word.user_id) %>
           </div>
           <div id="likes_buttons_<%= word.id %>">
             <%= render partial: 'likes/like', locals: { word: word, likes: @likes} %>

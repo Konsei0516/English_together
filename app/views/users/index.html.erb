@@ -7,6 +7,9 @@
     <div class="search-box">
       <%= render "search_form" %>
     </div>
+    <h2>ーーーアウトプットランキングーーー</h2>
+    <%= render "user_rank"%>
+    <h2>ーーー ユーザー一覧 ーーー</h2>
     <% @users.each do |user| %>
       <div class="follow-list">
         <%= link_to user_path(user) do %>
