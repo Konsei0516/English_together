@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.page(params[:page]).per(9).order("created_at ASC").where.not(id: current_user.id)
+    @rank_users = User.where(id: Word.group(:user_id).order('count(user_id) desc').limit(3).pluck(:user_id))
   end
 
   def show

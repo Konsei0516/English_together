@@ -1,0 +1,25 @@
+<div class="word__wrapper">
+  <% @word_ranks.each.with_index(1) do |rank,i| %>
+  <div class="word__wrapper__card" >
+  第<%= i %>位
+    <div class= "word__wrapper__card__title">
+      <%= link_to rank.name, word_path(rank) %>
+    </div>
+    <div class="word__wrapper__card__description">
+      <%= link_to rank.description, word_path(rank) %>
+    </div>
+    <div class="word__wrapper__card__name">
+      <%= link_to rank.user.name %>
+    </div>
+    <div id="likes_buttons_<%= rank.id %>">
+      <%= render partial: 'likes/like', locals: { word: rank, likes: @likes} %>
+    </div>
+    <div class ="word__wrapper__card__btn">
+    <% if current_user.id == rank.user.id %>
+      <%= link_to '編集', edit_word_path(rank), class: 'btn btn-success' %>
+      <%= link_to '削除', rank, method: :delete, data:{ confirm: "タスク「#{rank.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger delete' %>
+    <% end %>
+    </div>
+  </div>
+<% end %>
+</div>

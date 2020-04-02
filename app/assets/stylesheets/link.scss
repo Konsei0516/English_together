@@ -15,7 +15,7 @@
 ul li{ 	
   display: inline;
 }
-
+//ヘッダー
 .header__contents{
   display:inline;
   color:white;
@@ -23,6 +23,18 @@ ul li{
   padding:20px;
   position: absolute;
   right: 120px;
+  padding: 0 20px;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+.header__users{
+  display:inline;
+  color:white;
+  font-size: 16px;
+  padding:20px;
+  position: absolute;
+  left: 70px;
   padding: 0 20px;
   line-height: 80px;
   cursor: pointer;
@@ -41,7 +53,7 @@ ul li{
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   &:hover{
-    color:rgb(177, 53, 177);
+    color:rgb(165, 49, 211);
   }
 }
 
@@ -64,6 +76,7 @@ ul li{
   font-size: 20px;
 }
 
+//投稿ボタン
 .word__sent {
   width: 120px;
   background: #3CCACE;
