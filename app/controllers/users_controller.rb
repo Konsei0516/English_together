@@ -41,6 +41,10 @@ class UsersController < ApplicationController
 
   def user_search
     @users = User.search(params[:search])
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   private
