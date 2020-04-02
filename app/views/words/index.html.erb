@@ -7,6 +7,11 @@
 <%= render "search" %>
   <div class="word__main__box">
     <div class="container">
+      <div class="index__rank">
+        <h2>いいねランキング</h2>
+      </div>
+    <%= render "like_rank"%>
+      <h2>ーーーーーーー 新着 ーーーーーーーー</h2>
       <div class="word__wrapper">
         <% @words.each do |word| %>
         <div class="word__wrapper__card" >

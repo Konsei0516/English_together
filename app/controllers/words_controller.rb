@@ -3,6 +3,7 @@ class WordsController < ApplicationController
 
   def index
     @words = Word.order(created_at: :desc).page(params[:page]).per(9)
+    @word_ranks = Word.find(Like.group(:word_id).order('count(word_id) desc').limit(3).pluck(:word_id))
   end
 
   def show
