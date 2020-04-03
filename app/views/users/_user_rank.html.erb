@@ -1,6 +1,6 @@
 <% @rank_users.each.with_index(1) do |user,i| %>
   <div class="follow-list">
-  第<%= i%>位
+  <%= fa_icon("fa chess") %></i>第<%= i%>位
     <%= link_to user_path(user) do %>
       <% if user.image.present? %>
         <%= image_tag "#{user.image.url}", class: "main__user__top__image", size: "100x100" %>

@@ -38,12 +38,16 @@
   <h2>＜フォロー＞</h2>
   <div class="word__main__box">
     <% @user.followings.each do |user| %>
-    <table>
-    <tr>
-      <td>  <%= user.name %> </td>
-      <td><%= link_to '詳細', user_path(user) %></td>
-    </tr>
-    </table>
+    <ul class="follow">
+      <div class="follow__image">
+        <% if user.image? %>
+          <li class="follow__image__box"><%= image_tag user.image.url %></li>
+        <% else %>
+          <li class="follow__image__box"><%= image_tag("no-image.png") %></li>
+        <% end %>
+      </div>
+      <li class="follow__list"><%=link_to user.name,user_path(user),class:"follow__name" %></li>
+    </ul>
     <% end %>
   </div>
 </div>

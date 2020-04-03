@@ -23,7 +23,7 @@
           <% if @user.image? %>
             <div class="main__user__top__image__box"><%= image_tag @user.image.url %></div>
           <% else %>
-            <%= image_tag("/images/no-image.png") %>
+            <%= image_tag("no-image.png") %>
           <% end %>
         </div>
         <%= f.file_field :image %>

@@ -12,9 +12,11 @@
       </div>
     <% else %>
       <div class="grid-6">
-        <li><%= link_to "English together", root_path, class: 'header__title' %></li>
-        <%= link_to "ログイン", new_user_session_path, class: 'header__contents' %>
-        <%= link_to "新規登録", new_user_registration_path, class: 'header__name' %>
+        <ul class="header__list">
+          <li><%= link_to "English together", root_path, class: 'header__title' %></li>
+          <li class="header__contents"><%= link_to "ログイン", new_user_session_path, class:"header__word" %></li>
+          <li class="header__name"><%= link_to "新規登録", new_user_registration_path, class:"header__word"  %></li>
+        </ul>
       </div>
     <% end %>
   <div id="nav-container">

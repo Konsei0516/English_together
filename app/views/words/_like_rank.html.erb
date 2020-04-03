@@ -1,7 +1,7 @@
 <div class="word__wrapper">
   <% @word_ranks.each.with_index(1) do |rank,i| %>
   <div class="word__wrapper__card" >
-  第<%= i %>位
+  <%= fa_icon("fa chess") %>第<%= i %>位
     <div class= "word__wrapper__card__title">
       <%= link_to rank.name, word_path(rank) %>
     </div>
