@@ -1,5 +1,6 @@
 class WordsController < ApplicationController
   before_action :set_word, only: [:edit,:update,:destroy]
+  before_action :set_category,only: [:index,:new,:edit,:update,:create,:search]
 
   def index
     @words = Word.order(created_at: :desc).page(params[:page]).per(9)
@@ -50,10 +51,14 @@ class WordsController < ApplicationController
 
   private
   def word_params
-    params.require(:word).permit(:name,:description)
+    params.require(:word).permit(:name,:description,:category)
   end
 
   def set_word
     @word = current_user.words.find(params[:id])
+  end
+
+  def set_category
+    @categories = ['単語','熟語','長文','その他']
   end
 end

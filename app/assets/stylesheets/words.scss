@@ -29,7 +29,6 @@
     margin-bottom: 2rem;
     position: relative;
     display: flex;
-    -ms-flex-flow: column;
     flex-flow: column;
     justify-content: space-between;
     height:320px;
@@ -37,6 +36,11 @@
     box-shadow: 0 1px 5px #999;
     cursor: pointer;
     transition: .3s;
+    border: 2px #2196F3;
+    &:hover {
+      transition: .3s;
+      transform: translateY(-3px);
+    }
     &__title{
       padding-bottom: 10px;
       border-bottom: 2px dotted #2196F3;

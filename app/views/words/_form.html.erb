@@ -8,6 +8,10 @@
     <%= f.label :description, class: "form__group__label" %>
     <%= f.text_area :description, rows: 5,class: 'form__group__control', id: 'word_description' %>
   </div>
+  <div class="form__group">
+    <%= f.label :category, class: "form__group__label" %>
+    <%= f.select :category,@categories,class: 'form__group__control', id: 'word_description' %>
+  </div>
 </div>
 <%= f.submit nil, class: 'btn btn-primary' %>
 <% end %>

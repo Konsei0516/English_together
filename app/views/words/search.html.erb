@@ -11,6 +11,7 @@
   <div class="word__main__box">
     <div class="container">
       <div class="word__wrapper">
+      <% if @words.present? %>
         <% @words.each do |word| %>
         <div class="word__wrapper__card">
           <div class= "word__wrapper__card__title">
@@ -22,14 +23,22 @@
           <div class="word__wrapper__card__name">
             <%= link_to word.user.name %>
           </div>
+          <div class="word__wrapper__card__category">
+            <%= word.category %>
+          </div>
           <div id="likes_buttons_<%= word.id %>">
             <%= render partial: 'likes/like', locals: { word: word, likes: @likes} %>
           </div>
+          <% unless word.user.id!= current_user.id %>
           <div class ="word__wrapper__card__btn">
-            <%= link_to '編集', edit_word_path(word), class: 'btn btn-success' %>
+            <%= link_to '編集', edit_word_path(word), class: 'btn btn-success'%>
             <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
           </div>
+          <% end %>
         </div>
+        <% end %>
+      <% else %>
+        <p>単語は存在しません</p>
       <% end %>
       </div>
     </div>
