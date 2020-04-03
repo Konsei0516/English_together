@@ -2,7 +2,7 @@ class MessageBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform(message)
-    ActionCable.server.broadcast "room_channel", message_right: render_message_right(message), message_left: render_message_left(message)
+    ActionCable.server.broadcast "room_channel", message_right: render_message_right(message), message_left: render_message_left(message),chat_user: @arguments[0].user_id
   end
 
   private

@@ -7,6 +7,7 @@
     <div class="search-box">
       <%= render "search_form" %>
     </div>
+  <% if @users.present? %>
     <% @users.each do |user| %>
       <div class="follow-list">
         <%= link_to user_path(user) do %>
@@ -19,5 +20,8 @@
         <% end %>
       </div>
     <% end %>
+  <% else %>
+    <h2>ユーザーは存在しません</h2>
+  <% end %>
   </div>
 </div>

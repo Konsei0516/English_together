@@ -16,38 +16,60 @@ ul li{
   display: inline;
 }
 //ヘッダー
+.header__list{
+  height: 10px;
+  line-height: 10px;
+}
+
 .header__contents{
   display:inline;
   color:white;
   font-size: 16px;
-  padding:20px;
+  padding:0 20px;
   position: absolute;
   right: 120px;
-  padding: 0 20px;
   line-height: 80px;
   cursor: pointer;
+  &:hover{
+    color:rgb(165, 49, 211);
+  }
 }
 
 .header__users{
   display:inline;
   color:white;
   font-size: 16px;
-  padding:20px;
+  padding:0 20px;
   position: absolute;
   left: 70px;
-  padding: 0 20px;
   line-height: 80px;
   cursor: pointer;
+  &:hover{
+    color:rgb(165, 49, 211);
+  }
+}
+
+.header__new{
+  display:inline;
+  color:white;
+  font-size: 16px;
+  padding:0 20px;
+  position: absolute;
+  left: 200px;
+  line-height: 80px;
+  cursor: pointer;
+  &:hover{
+    color:rgb(165, 49, 211);
+  }
 }
 
 .header__title{
   display:inline;
   color:white;
   font-size: 36px;
-  padding:20px;
+  padding:0 20px;
   position: absolute;
   right: 540px;
-  padding: 0 20px;
   line-height: 80px;
   margin:0 auto;
   cursor: pointer;
@@ -61,7 +83,6 @@ ul li{
   display:inline;
   color:white;
   font-size: 16px;
-  padding:20px;
   position: absolute;
   right: 40px;
   padding: 0 20px;
@@ -69,6 +90,17 @@ ul li{
   line-height: 80px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
+  &:hover{
+    color:rgb(165, 49, 211);
+  }
+}
+
+.header__word{
+  color:white;
+  line-height: 70px;
+  &:hover{
+    color:rgb(165, 49, 211);
+  }
 }
 
 .post{
