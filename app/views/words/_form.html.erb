@@ -2,11 +2,15 @@
 <div class="word__main__box">
   <div class="form__group">
     <%= f.label :name, class: "form__group__label" %>
-    <%= f.text_field :name, class: 'form__group__control', id: 'word_name' %>
+    <%= f.text_field :name, placeholder: "wordを入力", class: 'form__group__control', id: 'word_name' %>
   </div>
   <div class="form__group">
     <%= f.label :description, class: "form__group__label" %>
-    <%= f.text_area :description, rows: 5,class: 'form__group__control', id: 'word_description' %>
+    <%= f.text_area :description, placeholder: "説明を入力", rows: 5,class: 'form__group__control', id: 'word_description' %>
+  </div>
+  <div class="form__group">
+    <%= f.label :category, class: "form__group__label" %>
+    <%= f.select :category, @categories, class: 'form__group__select', id: 'word_category' %>
   </div>
 </div>
 <%= f.submit nil, class: 'btn btn-primary' %>
