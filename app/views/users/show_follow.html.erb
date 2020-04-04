@@ -12,7 +12,7 @@
     </div>
     <p class="main__user__top__name">name :<%= current_user.name %></p>
     <%= fa_icon("edit") %><%= link_to "編集", edit_user_path(@user)%>
-    <p class="main__user__top__profile">profile : <%= current_user.profile %></p>
+    <p class="main__user__top__profile">profile<br/><%= current_user.profile %></p>
     <p class="main__user__top__like"><%= link_to("いいね", "/users/#{@user.id}/like") %></p>
     <%= render 'follow_form', class: "follow_form"%>
     <%= render 'stats', class: "follow_stats" %>
@@ -28,7 +28,7 @@
     <% end %>
   </div>
   <p class="main__user__top__name">名前 :<%= @user.name %></p>
-  <p class="main__user__top__profile">プロフィール : <%= @user.profile %></p>
+  <p class="main__user__top__profile">プロフィール<br/><%= @user.profile %></p>
   <%= render 'follow_form' %>
   <%= render 'stats' %>
 </div>
@@ -38,12 +38,16 @@
   <h2>＜フォロー＞</h2>
   <div class="word__main__box">
     <% @user.followings.each do |user| %>
-    <table>
-    <tr>
-      <td>  <%= user.name %> </td>
-      <td><%= link_to '詳細', user_path(user) %></td>
-    </tr>
-    </table>
+    <ul class="follow">
+      <div class="follow__image">
+        <% if user.image? %>
+          <li class="follow__image__box"><%= image_tag user.image.url %></li>
+        <% else %>
+          <li class="follow__image__box"><%= image_tag("no-image.png") %></li>
+        <% end %>
+      </div>
+      <li class="follow__list"><%=link_to user.name,user_path(user),class:"follow__name" %></li>
+    </ul>
     <% end %>
   </div>
 </div>
