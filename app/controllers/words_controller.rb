@@ -1,9 +1,11 @@
 class WordsController < ApplicationController
   before_action :set_word, only: [:edit,:update,:destroy]
   before_action :set_category,only: [:index,:new,:edit,:update,:create,:search]
+  before_action :set_available_tags_to_gon, only: [:new, :edit]
+  before_action :set_word_tags_to_gon,only: [:edit]
 
   def index
-    @words = Word.order(created_at: :desc).page(params[:page]).per(9)
+    @words = Word.order(created_at: :desc).page(params[:page]).per(9).includes(:tags)
     @word_ranks = Word.find(Like.group(:word_id).order('count(word_id) desc').limit(3).pluck(:word_id))
   end
 
@@ -51,7 +53,7 @@ class WordsController < ApplicationController
 
   private
   def word_params
-    params.require(:word).permit(:name,:description,:category)
+    params.require(:word).permit(:name,:description,:category,:tag_list)
   end
 
   def set_word
@@ -60,5 +62,13 @@ class WordsController < ApplicationController
 
   def set_category
     @categories = ['単語','熟語','長文','その他']
+  end
+
+  def set_available_tags_to_gon
+    gon.available_tags = Word.tags_on(:tags).pluck(:name)
+  end
+
+  def set_word_tags_to_gon
+    gon.word_tags = @word.tag_list
   end
 end
