@@ -1,16 +1,44 @@
 <%= render 'link/header'%>
 <div class="hero"> 
   <div class="hero__box">
-    <h2 class="hero__box__title">Let`s English Tark</h2>
-    <p class="hero__box__content">英会話を楽しもう</p>
+    <h2 class="hero__box__title">Welcome to English together</h2>
+    <p class="hero__box__content">
+      English togetherは英語学習に取り組むユーザー<br/>に向けた学習した内容をシェアできるアプリです。<br/>
+      学んだ英単語ををアウトプットして定着させよう！
+    </p>
   </div>
   <div class="hero__list">
   <% if user_signed_in? %>
-    <%= link_to 'ROOMへ', 'rooms/show', class: "hero__link" %>
+    <!--<%= link_to 'ROOMへ', 'rooms/show', class: "hero__link" %>-->
+    <%= link_to '投稿してみる', new_word_path, class: "hero__link" %>
     <%= link_to '投稿を見る', words_path, class: "hero__login" %>
   <% else %>
     <%= link_to '新規登録', '/users/sign_up', class: "hero__link" %>
     <%= link_to 'ログイン', '/users/sign_in', class: "hero__login" %>
   <% end %>
   </div>
+</div>
+<div class="top__sub">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 align-center">
+        <div class="d-flex justify-content-center">
+          <%= image_tag "share_image.png", alt: "aaa" %>
+        </div>
+        <h3 class="function-list__name py-2">シェア</h3>
+        <p>勉強や調べた単語ををシェアすることができ、他の人の投稿を見ることができます。</p>
+      </div>
+      <div class="col-6 align-center">
+        <div class="d-flex justify-content-center">
+          <%= image_tag "records.jpg", alt: "aaa" %>
+        </div>
+        <h3 class="function-list__name py-2">記録</h3>
+        <p>投稿した英単語を復習することでより記憶に定着させられます。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="top__word">
+  <h2><%= fa_icon("book") %>新着投稿</h2>
+  <%= render partial: "words/my-index", locals: { word: @word }%>
 </div>

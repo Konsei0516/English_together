@@ -3,76 +3,128 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
 
+//top
 .hero {
   background: image-url('top');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   position: relative;
-  height: 100%;
+  height: 75%;
   width:100%;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin-top: 4.8%;
-  position: fixed;
+  padding-top:130px;
+  //position: fixed;
   &__box{
-    padding-top:130px;
+    background-color: rgba(60,60,60,0.4);
     &__title{
-      color: rgb(44, 23, 230);
+      color: rgb(242, 238, 245);
       margin:10px 0 42px;
-      font-size: 5rem;
+      font-size: 4.5rem;
       z-index: 1;
       font-family: 'Montserrat', sans-serif;
     }
     &__content{
-      color:rgb(28, 13, 238);
+      color:white;
       margin:10px 0 42px;
-      font-size: 4rem;
+      font-size: 1.3rem;
       z-index: 1;
       font-family: 'Montserrat', sans-serif;
     }
   }
 }
 
+.hero__list{
+  margin:0 auto;
+  width:1080px;
+}
+
 .hero__link{
-  position: absolute;
-  top: 60%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  font-size: 35px;
+  font-size: 30px;
   z-index: 1;
   display: inline-block;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
+  margin:3rem;
   width: 200px;
   outline: none;
   border: none;
   border-radius: 20px;
   background: linear-gradient(to right, rgb(67, 164, 212), #40ccdf);
   color: rgb(248, 248, 246);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 35px;
   cursor: pointer;
   text-align: center;
 }
 
 .hero__login{
-  position: absolute;
-  top: 60%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  font-size: 35px;
+  font-size: 30px;
   z-index: 1;
   display: inline-block;
   padding: 1rem 3rem;
+  margin:3rem;
   width: 200px;
   outline: none;
   border: none;
   border-radius: 20px;
   background: linear-gradient(to right, rgb(236, 236, 231), #e6e7e0);
-  color: black;
-  font-size: 1.5rem;
+  color: rgb(116, 88, 88);
+  font-size: 1.1rem;
   line-height: 35px;
   cursor: pointer;
   text-align: center;
+}
+
+.top__sub{
+  padding-top: 30px;
+}
+
+.top__word{
+  padding:2rem;
+  text-align: center;
+}
+
+.function-list {
+  &__name {
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.product {
+  &__photo {
+    padding: 10px;
+  }
+
+  &__date {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__icon {
+    display: inline-block;
+  }
+
+  &__response-list {
+    text-align: center;
+    width: 100%;
+    &__item {
+      display: inline-block;
+    }
+  }
+}
+
+.justify-content-center{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin:0 auto;
+  overflow: hidden;
+  border: 1px solid rgb(228, 217, 217);
+  position: relative;
 }
