@@ -7,6 +7,7 @@ class WordsController < ApplicationController
   def index
     @words = Word.order(created_at: :desc).page(params[:page]).per(9).includes(:tags)
     @word_ranks = Word.find(Like.group(:word_id).order('count(word_id) desc').limit(3).pluck(:word_id))
+    @tags = ActsAsTaggableOn::Tag.most_used
   end
 
   def show
@@ -41,6 +42,11 @@ class WordsController < ApplicationController
   def destroy
     @word.destroy
     redirect_to words_url,notice:"削除しました"
+  end
+
+  def tag_index
+    @words = Word.tagged_with(params[:tag_name]).page(params[:page]).per(9)
+    @tag_name = params[:tag_name]
   end
 
   def search
