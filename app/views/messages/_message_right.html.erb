@@ -7,11 +7,12 @@
         <%= image_tag("no-image.png") %>
       <% end %>
       <figcaption class="kaiwa-img-description">
-        <%= message.user.email %>
+        <%= message.user.name %>
       </figcaption>
     </figure>
     <div class="kaiwa-text-right">
       <%= simple_format(message.content) %>
+      <%= message.created_at%>
     </div>
   </div>
 </div>

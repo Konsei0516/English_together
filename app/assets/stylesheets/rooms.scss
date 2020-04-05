@@ -148,7 +148,7 @@ p.kaiwa-text:last-child {
   bottom: 0px;                /* 位置(下0px) */      
 }
 
-.bms__send{
+.input{
   width:100%;
   display:flex;
   background-color:#eee;/*タイムラインの色と同じにする*/
@@ -159,7 +159,7 @@ p.kaiwa-text:last-child {
   padding: 4px;
 }
 
-.bms__send__message{
+.center-block{
   width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
   line-height: 16px;
   height: auto;
@@ -171,7 +171,7 @@ p.kaiwa-text:last-child {
   box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
 }
 
-.bms__btn__send{
+.chat_submit{
   width: 72px;
   height: 42px;
   font-size: 16px;
