@@ -10,7 +10,7 @@
       <div class="index__rank">
         <h2>ーーーーー いいねランキング ーーーーー</h2>
       </div>
-    <%= render "like_rank"%>
+      <%= render "like_rank"%>
       <h2>ーーーーーーー 新着 ーーーーーーーー</h2>
       <div class="word__wrapper">
         <% @words.each do |word| %>
@@ -36,8 +36,20 @@
             <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger delete' %>
           <% end %>
           </div>
+          <div class="card-footer">
+            <%= render partial: 'tags', locals: { tags: word.tags }%>
+          </div>
         </div>
       <% end %>
+      <h5 class="tag_list__title">タグ一覧</h5>
+        <div class="tag_list__content">
+          <% @tags.each do |tag| %>
+            <span class="badge badge-info">
+              <%= link_to tag.name, tag_index_words_path(tag_name: tag.name), class: "text-white" %> 
+              <%= "(#{tag.taggings_count})"%>
+            </span>
+          <% end %>
+        </div>
       </div>
       <%= paginate(@words) %>
     </div>

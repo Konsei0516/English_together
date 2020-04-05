@@ -1,6 +1,12 @@
 <%= form_with model: @word, local: true do |f| %>
 <div class="word__main__box">
   <div class="form__group">
+    <%= f.label "タグ付け", class: "form__group__label" %>
+    <ul id="article-tags">
+      <li><%= f.text_area :tag_list %></li>
+    </ul>
+  </div>
+  <div class="form__group">
     <%= f.label :name, class: "form__group__label" %>
     <%= f.text_field :name, placeholder: "wordを入力", class: 'form__group__control', id: 'word_name' %>
   </div>

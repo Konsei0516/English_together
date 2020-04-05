@@ -1,4 +1,6 @@
 class Word < ApplicationRecord
+  acts_as_taggable
+  
   validates :name, presence: true
   validates :description, presence: true
   validates :category, presence: true
