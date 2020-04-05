@@ -1,4 +1,4 @@
-$(document).on('ready page:load', function() {
+$(document).on('turbolinks:load', function() {
   var i, len, ref, results, tag;
   $('#article-tags').tagit({
     fieldName: 'word[tag_list]',

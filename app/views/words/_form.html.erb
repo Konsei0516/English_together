@@ -1,9 +1,9 @@
 <%= form_with model: @word, local: true do |f| %>
 <div class="word__main__box">
   <div class="form__group">
-    <%= f.label "タグ付け" %>
+    <%= f.label "タグ付け", class: "form__group__label" %>
     <ul id="article-tags">
-      <%= f.text_area :tag_list, placeholder:"タグを入力"%>
+      <li><%= f.text_area :tag_list %></li>
     </ul>
   </div>
   <div class="form__group">

@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load'function() {
   function addWord(word) {
     let html = `
       <div class="search-result">

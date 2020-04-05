@@ -1,6 +1,8 @@
+//メイン
 .word__main{
   padding:2rem;
   text-align: center;
+  background-color:white;
   &__box{
     margin:0 auto;
     max-width: 1080px;
@@ -18,6 +20,7 @@
   }
 }
 
+//カード
 .word__wrapper{
   display: grid;
   margin: 5rem 0 0;
@@ -33,6 +36,7 @@
     justify-content: space-between;
     height:320px;
     border-radius: 3px;
+    background-color: whitesmoke;
     box-shadow: 0 1px 5px #999;
     cursor: pointer;
     transition: .3s;
@@ -62,6 +66,54 @@
   }
 }
 
+//show
+.word__show{
+  padding:2rem;
+  text-align: center;
+  background-color:white;
+  &__box{
+    margin:0 auto;
+    max-width: 1080px;
+    height: auto;
+    &__card{
+      margin-bottom: 2rem;
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      height:480px;
+      border-radius: 3px;
+      background-color: whitesmoke;
+      box-shadow: 0 1px 5px #999;
+      cursor: pointer;
+      transition: .3s;
+      border: 2px #2196F3;
+      &:hover {
+        transition: .3s;
+        transform: translateY(-3px);
+      }
+      &__title{
+        padding-bottom: 10px;
+        border-bottom: 2px dotted #2196F3;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+      &__description{
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      &__name{
+        font-size: .9rem;
+        position: absolute;
+        right: 10px;
+        bottom: 5px;
+      }
+    }
+  }
+}
+//form
 .form__group{
   margin-top:10px;
   padding: 2rem;
@@ -86,7 +138,7 @@
 }
 
 .main__index{
-  padding:180px 0 1rem;
+  padding:150px 0 1rem;
   width: 100%;
   height:auto;
   text-align: center;
@@ -96,4 +148,12 @@
   }
 }
 
+#article-tags{
+  padding: .5rem 1rem;
+  width: 50%;
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  margin:0 auto;
+}
 

@@ -1,11 +1,12 @@
 <%= render 'link/header'%>
+<div class="main__index">
+  <h3>タグ「<%= @tag_name %>」の一覧</h3>
+</div>
 <div class="word__main">
   <div class="word__main__box">
-  <h3>タグ「<%= @tag_name %>」の一覧</h3>
     <div class="word__wrapper">
       <% @words.each do |word| %>
       <div class="word__wrapper__card" >
-        <%= render partial: 'tags', locals: { tags: word.tags }%>
         <div class= "word__wrapper__card__title">
           <%= link_to word.name, word_path(word) %>
         </div>
@@ -26,6 +27,9 @@
           <%= link_to '編集', edit_word_path(word), class: 'btn btn-success' %>
           <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger delete' %>
         <% end %>
+        </div>
+        <div class="card-footer">
+          <%= render partial: 'tags', locals: { tags: word.tags }%>
         </div>
       </div>
     <% end %>
