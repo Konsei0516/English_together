@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   has_many :messages
   has_many :words
   has_many :likes, dependent: :destroy
@@ -15,7 +16,7 @@ class User < ApplicationRecord
   has_many :follower_relationships, foreign_key: "following_id", class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :follower_relationships
 
-  validates :name, presence: true
+  validates :name, presence: true,length: {maximum: 8}
   validates :profile, length: {maximum: 200}
 
   #フォロー
@@ -32,7 +33,7 @@ class User < ApplicationRecord
   end
 
   #ユーザー検索
-  def self.search(search) #ここでのself.はUser.を意味する
+  def self.search(search) 
     if search
       where(['name LIKE ?', "%#{search}%"]) #検索とnameの部分一致を表示。User.は省略
     else

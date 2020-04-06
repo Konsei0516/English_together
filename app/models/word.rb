@@ -1,7 +1,9 @@
 class Word < ApplicationRecord
   acts_as_taggable
+
+  VALID_WORD_NAME_REGEX = /\A[0-9a-zA-Z]*\z/
   
-  validates :name, presence: true
+  validates :name, presence: true,format: { with: VALID_WORD_NAME_REGEX}
   validates :description, presence: true
   validates :category, presence: true
 
