@@ -1,29 +1,38 @@
-App.room = App.cable.subscriptions.create("RoomChannel", {
-  connected: function() {
-    // Called when the subscription is ready for use on the server
-  },
+document.addEventListener('turbolinks:load', function() {
+  return App.room = App.cable.subscriptions.create({
+    channel: "RoomChannel",
+  }, {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      var show_user;
+      show_user = $('#show_user').data('show_user');
+      console.log(data['chat_user']);
+      console.log(show_user);
+      if (data['chat_user'] === show_user) {
+        return $('#messages').append(data['message_right']);
+      } else {
+        return $('#messages').append(data['message_left']);
+      }
+    },
+    speak: function(message) {
+      return this.perform('speak', {
+        message: message
+      });
+    }
+  });
+});
 
-  disconnected: function() {
-    // Called when the subscription has been terminated by the server
-  },
-
-  received: function(message) {
-    const messages = document.getElementById('messages')
-    messages.innerHTML += message
-    console.log(messages)
-  },
-
-  speak: function(content) {
-    return this.perform('speak', {message: content});
+$(document).on('keydown', '[data-behavior~=room_speaker]', function(event) {
+  if (event.ctrlKey && event.keyCode === 13) {
+    App.room.speak(event.target.value);
+    event.target.value = '';
+    return event.preventDefault();
   }
 });
 
-document.addEventListener('DOMContentLoaded',function(){
-  const input = document.getElementById('chat-input')
-  const button = document.getElementById('button__chat')
-  button.addEventListener('click',function(){
-    content = input.value
-    App.room.speak(content)
-    input.value = ''
-  })
-})
+$(document).on('click', '.chat_submit', function() {
+  App.room.speak($('[data-behavior~=room_speaker]').val());
+  $('[data-behavior~=room_speaker]').val('');
+  return event.preventDefault();
+});

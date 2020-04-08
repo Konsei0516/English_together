@@ -11,11 +11,20 @@
       <div class="word__wrapper__card__name">
         <%= link_to word.user.name %>
       </div>
+      <div class="word__wrapper__card__category">
+        <%= word.category %>
+      </div>
+      <div id="likes_buttons_<%= word.id %>">
+        <%= render partial: 'likes/like', locals: { word: word, likes: @likes} %>
+      </div>
       <div class ="word__wrapper__card__btn">
       <% if word.user == current_user %>
         <%= link_to '編集', edit_word_path(word), class: 'btn btn-success' %>
         <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
       <% end %>
+      </div>
+      <div class="card-footer">
+        <%= render partial: 'words/tags', locals: { tags: word.tags }%>
       </div>
     </div>
     <% end %>

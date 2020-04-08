@@ -9,7 +9,7 @@
   </div>
   <div class="hero__list">
   <% if user_signed_in? %>
-    <!--<%= link_to 'ROOMへ', 'rooms/show', class: "hero__link" %>-->
+    <%= link_to 'ROOMへ', 'rooms/show', class: "hero__room" %>
     <%= link_to '投稿してみる', new_word_path, class: "hero__link" %>
     <%= link_to '投稿を見る', words_path, class: "hero__login" %>
   <% else %>

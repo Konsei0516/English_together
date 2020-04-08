@@ -95,12 +95,21 @@
       }
     }
     &__name{
-      font-size:1.4rem;
+      font-size:1.8rem;
       color:#fff;
       padding-top:8px;
+      text-align: center;
+      display: block;
+    }
+    &__edit{
+      font-size:1.4rem;
+      margin:0 auto;
+      position: absolute;
+      top:384px;
+      right:620px;
     }
     &__profile{
-      font-size:1.5rem;
+      font-size:1.6rem;
       margin:20px;
     }
     &__like{
@@ -145,12 +154,43 @@
     margin:0 auto;
     max-width: 1080px;
     height: auto;
+    &__rank{
+      margin:60px;
+    }
+    &__in{
+      margin:60px;
+      &__list{
+        display: inline-block;
+        background-color: white;
+        line-height: 60px;
+        width: 255px;
+        margin: 0 15px 30px;
+        padding-top: 20px;
+        font-size: 24px;
+        border: solid 1px #EEEEEE;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        &:hover {
+          transition: .3s;
+          transform: translateY(-3px);
+        }
+        &__name {
+          color: #444444;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        :hover {
+          color: rgb(46, 211, 161);
+        }
+      }
+    }
   }
 }
 
 .follow-list {
   display: inline-block;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.87);
   line-height: 60px;
   width: 255px;
   margin: 0 15px 30px;

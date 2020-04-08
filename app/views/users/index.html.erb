@@ -8,20 +8,24 @@
       <%= render "search_form" %>
     </div>
     <h2>ーーーアウトプットランキングーーー</h2>
-    <%= render "user_rank"%>
+    <div class="user__main__box__rank">
+      <%= render "user_rank"%>
+    </div>
     <h2>ーーー ユーザー一覧 ーーー</h2>
+    <div class="user__main__box__in">
     <% @users.each do |user| %>
-      <div class="follow-list">
+      <div class="user__main__box__in__list">
         <%= link_to user_path(user) do %>
           <% if user.image.present? %>
             <%= image_tag "#{user.image.url}", class: "main__user__top__image", size: "100x100" %>
           <% else %>
             <%= image_tag "no-image.png", class: "main__user__top__image",size: "100x100" %>
           <% end %>
-          <p class="follow-list__name"><%= user.name %></p>
+          <p class="user__main__box__in__list__name"><%= user.name %></p>
         <% end %>
       </div>
     <% end %>
+    </div>
     <%= paginate(@users) %>
   </div>
 </div>

@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_word, only: [:edit,:update,:destroy]
   before_action :set_category,only: [:index,:new,:edit,:update,:create,:search]
   before_action :set_available_tags_to_gon, only: [:new, :edit]

@@ -10,8 +10,10 @@
         <%= image_tag("no-image.png") %>
       <% end %>
     </div>
-    <p class="main__user__top__name">name :<%= current_user.name %></p>
-    <%= fa_icon("edit") %><%= link_to "編集", edit_user_path(@user)%>
+    <p class="main__user__top__name">name: <%= current_user.name %></p>
+    <%= link_to edit_user_path(@user),class: "main__user__top__edit" do%>
+      <%= fa_icon("edit") %>
+    <% end %>
     <p class="main__user__top__profile">profile<br/><%= current_user.profile %></p>
     <p class="main__user__top__like"><%= link_to("いいね", "/users/#{@user.id}/like") %></p>
     <%= render 'follow_form', class: "follow_form"%>
@@ -37,7 +39,7 @@
 <div class="word__main">
   <h2>＜フォロー＞</h2>
   <div class="word__main__box">
-    <% @user.followings.each do |user| %>
+    <% @users.each do |user| %>
     <ul class="follow">
       <div class="follow__image">
         <% if user.image? %>
@@ -50,4 +52,5 @@
     </ul>
     <% end %>
   </div>
+  <%= paginate(@users) %>
 </div>
