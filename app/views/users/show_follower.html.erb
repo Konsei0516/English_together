@@ -50,7 +50,7 @@
       </div>
       <li class="follow__list"><%=link_to user.name,user_path(user),class:"follow__name" %></li>
     </ul>
-    <%= paginate(user) %>
+    <%= paginate(@users) %>
     <% end %>
   </div>
 </div>
