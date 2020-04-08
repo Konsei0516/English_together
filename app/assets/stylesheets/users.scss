@@ -95,12 +95,21 @@
       }
     }
     &__name{
-      font-size:1.4rem;
+      font-size:1.8rem;
       color:#fff;
       padding-top:8px;
+      text-align: center;
+      display: block;
+    }
+    &__edit{
+      font-size:1.4rem;
+      margin:0 auto;
+      position: absolute;
+      top:384px;
+      right:620px;
     }
     &__profile{
-      font-size:1.5rem;
+      font-size:1.6rem;
       margin:20px;
     }
     &__like{
@@ -152,7 +161,7 @@
       margin:60px;
       &__list{
         display: inline-block;
-        background-color: #FFFFFF;
+        background-color: white;
         line-height: 60px;
         width: 255px;
         margin: 0 15px 30px;

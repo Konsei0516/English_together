@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @users = User.page(params[:page]).per(9).order("created_at ASC").where.not(id: current_user.id)
     @rank_users = User.where(id: Word.group(:user_id).order('count(user_id) desc').limit(3).pluck(:user_id))
@@ -25,19 +27,19 @@ class UsersController < ApplicationController
 
   def following
     @user  = User.find(params[:id])
-    @users = @user.followings
+    @users = @user.followings.page(params[:page]).per(6)
     render 'show_follow'
   end
 
   def followers
     @user  = User.find(params[:id])
-    @users = @user.followers
+    @users = @user.followers.page(params[:page]).per(6)
     render 'show_follower'
   end
 
   def like
     @user = User.find_by(id: params[:id])
-    @likes = Like.where(user_id: @user.id)
+    @likes = Like.where(user_id: @user.id).page(params[:page]).per(6)
   end
 
   def user_search

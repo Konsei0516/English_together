@@ -10,8 +10,11 @@
         <%= image_tag("/images/no-image.png") %>
       <% end %>
     </div>
-    <p class="main__user__top__name">name<br/><%= current_user.name %></p>
+    <p class="main__user__top__name">name: <%= current_user.name %></p>
     <p class="main__user__top__profile">profile<br/><%= current_user.profile %></p>
+    <%= link_to edit_user_path(@user),class: "main__user__top__edit" do%>
+      <%= fa_icon("edit") %>
+    <% end %>
     <p class="main__user__top__like"><%= link_to("いいね", "/users/#{@user.id}/like") %></p>
     <%= render 'follow_form', class: "follow_form"%>
     <%= render 'stats', class: "follow_stats" %>
@@ -44,15 +47,25 @@
             <div class="word__wrapper__card__name">
               <%= link_to(user.name, "/users/#{user.id}" ) %>    
             </div>
+            <div class="word__wrapper__card__category">
+              <%= word.category %>
+            </div>
             <div class ="word__wrapper__card__btn">
             <% if word.user == current_user %>
               <%= link_to '編集', edit_word_path(word), class: 'btn btn-success' %>
               <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
             <% end %>
             </div>
+            <div id="likes_buttons_<%= word.id %>">
+              <%= render partial: 'likes/like', locals: { word: word, likes: @likes} %>
+            </div>
+            <div class="card-footer">
+              タグ：<%= render partial: 'words/tags', locals: { tags: word.tags }%>
+            </div>
           </div>
         <% end %>
       </div>
     <div>
+    <%= paginate(@likes) %>
   </div>
 </div>
