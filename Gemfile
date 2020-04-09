@@ -79,3 +79,7 @@ gem 'mini_magick'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'jquery-ui-rails'
 gem 'gon'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
