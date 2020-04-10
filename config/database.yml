@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
   database: ECA_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
