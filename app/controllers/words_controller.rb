@@ -51,7 +51,7 @@ class WordsController < ApplicationController
   end
 
   def search
-    @words = Word.search(params[:keyword])
+    @words = Word.search(params[:keyword]).page(params[:page]).per(9)
     respond_to do |format|
       format.html
       format.json
