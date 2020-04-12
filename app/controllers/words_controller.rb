@@ -45,6 +45,7 @@ class WordsController < ApplicationController
       redirect_to words_url,notice:"削除しました"
     else
       redirect_to word_url,alert:"削除に失敗しました"
+    end
   end
 
   def tag_index
