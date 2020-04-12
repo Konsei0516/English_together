@@ -36,13 +36,15 @@ class WordsController < ApplicationController
     if @word.save
       redirect_to words_path, notice:"投稿しました"
     else
-      render :new
+      render :new, alert:"投稿に失敗しました"
     end
   end
 
   def destroy
-    @word.destroy
-    redirect_to words_url,notice:"削除しました"
+    if @word.destroy
+      redirect_to words_url,notice:"削除しました"
+    else
+      redirect_to word_url,alert:"削除に失敗しました"
   end
 
   def tag_index
