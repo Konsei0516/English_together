@@ -10,6 +10,10 @@ h1 {
 .chat{
   padding-top: 68px;
   padding-bottom:48px;
+  background: image-url('sky');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 .chat_box{
@@ -20,10 +24,6 @@ h1 {
   max-width: 1500px;
   overflow: scroll;
   border: rgb(211, 211, 221) 1px solid;
-  background: image-url('sky');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
 }
 
 .morning{
