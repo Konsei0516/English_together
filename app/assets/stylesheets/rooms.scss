@@ -8,22 +8,23 @@ h1 {
 }
 
 .chat{
-  padding-top: 68px;
-  padding-bottom:48px;
   background: image-url('sky');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 
 .chat_box{
   width: 100%;
   height: auto;
   padding: 10px;
+  padding-top: 75px;
+  padding-bottom:48px;
   margin: 0 auto;
   max-width: 1500px;
   overflow: scroll;
-  border: rgb(211, 211, 221) 1px solid;
 }
 
 .morning{
@@ -39,9 +40,7 @@ h1 {
   background-position: center top;
   background-repeat: no-repeat;
 }
-/*——————–
-吹き出しを作る
-——————–*/
+
 /* 全体のスタイル */
 .kaiwa {
   margin-bottom: 25px;
@@ -146,8 +145,8 @@ p.kaiwa-text:last-child {
 
 .form{
   width:100%;
-  position: fixed;            /* フッターの固定 */
-  bottom: 0px;                /* 位置(下0px) */      
+  position: fixed;
+  bottom: 0px;
 }
 
 .input{
