@@ -1,8 +1,8 @@
 <div class="search">
-<%= form_with(url: user_search_users_path, local: true, method: :get, class: "search-form__user") do |form| %>
-  <%= form.text_field :search, placeholder: "ユーザーを検索する", class: "search-input__user" %>
-  <%= form.submit "検索", class: "search-btn__user" %>
-  <p class="user-search-result">
-  </p>
-<% end %>
+  <%= form_with(url: user_search_users_path, local: true, method: :get, class: "search-form__user") do |form| %>
+    <%= form.text_field :search, placeholder: "ユーザーを検索する", class: "search-input__user" %>
+    <%= form.submit "検索", class: "search-btn__user" %>
+    <div class="user-search-result">
+    </div>
+  <% end %>
 </div>

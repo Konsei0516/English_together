@@ -41,6 +41,8 @@
           </div>
         </div>
       <% end %>
+      </div>
+      <div class="tag_list">
       <h5 class="tag_list__title">タグ一覧</h5>
         <div class="tag_list__content">
           <% @tags.each do |tag| %>
@@ -51,8 +53,8 @@
           <% end %>
         </div>
       </div>
-      <%= paginate(@words) %>
     </div>
+    <%= paginate(@words) %>
   </div>
 </div>
 <%= render 'link/word'%>

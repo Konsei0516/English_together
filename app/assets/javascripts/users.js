@@ -1,3 +1,4 @@
+//ユーザーのインクリメンタルサーチ
 $(document).on('turbolinks:load',function() {
   function addUser(user) {
     let html = `
