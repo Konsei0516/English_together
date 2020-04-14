@@ -1,3 +1,4 @@
+//wordのインクリメンタルサーチ
 $(document).on('turbolinks:load',function() {
   function addWord(word) {
     let html = `

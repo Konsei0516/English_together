@@ -1,2 +1,24 @@
-<h1>Home#about</h1>
-<p>Find me in app/views/home/about.html.erb</p>
+<%= render 'link/header'%>
+<div class="about">
+  <div class="about-box">
+    <h1 class="about-box__title">English togetherとは？</h1>
+    <p>English togetherは英語学習アプリケーション</p>
+    <p>英語のみのリアルタイムチャットで学んだ英語を実際に使おう。</p>
+    <p>わからない単語は調べて投稿機能を使ってシェアしよう。</p>
+    <p>また他の人の投稿にいいね、コメントして知識を深めよう。</p>
+    <%= link_to "新規登録", new_user_registration_path, class: "btn btn-dark"%>
+  </div>
+
+<section id="fairy">
+  <div class="inner">
+    <div class="flake1"></div>
+    <div class="flake2"></div>
+    <div class="flake3"></div>
+    <div class="flake4"></div>
+    <div class="flake5"></div>
+    <div class="flake6"></div>
+    <div class="flake7"></div>
+    <div class="flake8"></div>
+  </div>
+</section>
+</div>

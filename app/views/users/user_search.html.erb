@@ -1,6 +1,6 @@
 <%= render 'link/header'%>
 <div class="main__index">
-  <h2>＜User search result＞</h2>
+  <h2>＜ユーザーの検索結果＞</h2>
 </div>
 <div class="user__main">
   <div class="user__main__box">
@@ -23,5 +23,6 @@
   <% else %>
     <h2>ユーザーは存在しません</h2>
   <% end %>
+  <%= paginate(@users) %>
   </div>
 </div>

@@ -4,9 +4,14 @@ Rails.application.routes.draw do
   }
   
   root to: "home#top"
-  resources :homes, only: [:top,:about]
+  resources :home do
+    collection do 
+      get 'home'
+      get 'about'
+    end
+  end
   
-  #不具合のため修正
+  
   resources :rooms, only: [:show]
 
   resources :words do

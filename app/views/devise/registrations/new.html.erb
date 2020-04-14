@@ -7,12 +7,12 @@
 
         <div class="field">
           <%= f.label "名前", class: 'field__label' %><br/>
-          <%= f.text_field :name, autofocus: true, class: 'field__input' %>
+          <%= f.text_field :name, autofocus: true, class: 'field__input', placeholder: "８文字" %>
         </div>
         
         <div class="field">
           <%= f.label :email, class: 'field__label' %><br />
-          <%= f.email_field :email, class: 'field__input' %>
+          <%= f.email_field :email, class: 'field__input', placeholder: "example@example.com" %>
         </div>
 
         <div class="field">

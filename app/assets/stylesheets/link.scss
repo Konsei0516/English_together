@@ -25,9 +25,6 @@ ul li{
   right: 120px;
   line-height: 80px;
   cursor: pointer;
-  &:hover{
-    color:rgb(165, 49, 211);
-  }
 }
 
 .header__users{
@@ -39,9 +36,7 @@ ul li{
   left: 70px;
   line-height: 80px;
   cursor: pointer;
-  &:hover{
-    color:rgb(165, 49, 211);
-  }
+  
 }
 
 .header__new{
@@ -53,9 +48,7 @@ ul li{
   left: 200px;
   line-height: 80px;
   cursor: pointer;
-  &:hover{
-    color:rgb(165, 49, 211);
-  }
+  
 }
 
 .header__title{
@@ -65,13 +58,11 @@ ul li{
   padding:0 20px;
   position: absolute;
   right: 540px;
-  line-height: 80px;
+  line-height: 70px;
   margin:0 auto;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-  &:hover{
-    color:rgb(165, 49, 211);
-  }
+  
 }
 
 .header__name{
@@ -85,16 +76,15 @@ ul li{
   line-height: 80px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-  &:hover{
-    color:rgb(165, 49, 211);
-  }
+  
 }
 
 .header__word{
   color:white;
-  line-height: 70px;
+  height:80px;
+  line-height: 80px;
   &:hover{
-    color:rgb(165, 49, 211);
+    color:rgb(155, 12, 238);
   }
 }
 

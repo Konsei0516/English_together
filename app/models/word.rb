@@ -1,8 +1,8 @@
 class Word < ApplicationRecord
   acts_as_taggable
 
+  #バリデーション
   VALID_WORD_NAME_REGEX = /\A[0-9a-zA-Z]*\z/
-  
   validates :name, presence: true,format: { with: VALID_WORD_NAME_REGEX}
   validates :description, presence: true
   validates :category, presence: true
@@ -16,8 +16,8 @@ class Word < ApplicationRecord
     likes.find_by(user_id: user_id)
   end
 
+  # 検索
   def self.search(input)
-    return nil if input == ""
     Word.where(['name LIKE ?', "%#{input}%"] ).limit(10)
   end
 

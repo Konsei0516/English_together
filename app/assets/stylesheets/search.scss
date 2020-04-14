@@ -1,7 +1,6 @@
 .search{
-  width:500px;
+  width:650px;
   margin:0 auto;
-  padding:50px;
 }
 
 .word__serach{
@@ -15,7 +14,7 @@
 .search-input,
 .search-input__user{
   border: 1px solid rgb(40, 54, 54);
-  padding: 10px 30px;
+  padding: 10px 60px;
   border-radius: 10px;
 }
 
@@ -37,7 +36,7 @@
 
 .word-search-result,
 .user-search-result{
-  position: absolute;
+  position: left;
   width: 500px;
   z-index: 1;
   .search-result,
