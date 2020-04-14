@@ -29,19 +29,19 @@
           <div id="likes_buttons_<%= word.id %>">
             <%= render partial: 'likes/like', locals: { word: word, likes: @likes} %>
           </div>
-          <% unless word.user.id!= current_user.id %>
           <div class ="word__wrapper__card__btn">
+          <% unless word.user.id!= current_user.id %>
             <%= link_to '編集', edit_word_path(word), class: 'btn btn-success'%>
             <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
-          </div>
           <% end %>
+          </div>
         </div>
         <% end %>
       <% else %>
-        <p>単語は存在しません</p>
+        <h2>単語は存在しません</h2>
       <% end %>
       </div>
+      <%= paginate(@words) %>
     </div>
-    <%= paginate(@words) %>
   </div>
 </div>

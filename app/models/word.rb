@@ -18,7 +18,6 @@ class Word < ApplicationRecord
 
   # 検索
   def self.search(input)
-    return nil if input == ""
     Word.where(['name LIKE ?', "%#{input}%"] ).limit(10)
   end
 

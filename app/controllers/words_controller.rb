@@ -55,6 +55,7 @@ class WordsController < ApplicationController
 
   def search
     @words = Word.search(params[:keyword]).page(params[:page]).per(9)
+    #@words = Kaminari.paginate_array(@word)
     respond_to do |format|
       format.html
       format.json

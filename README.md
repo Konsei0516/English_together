@@ -28,10 +28,22 @@
 👉 http://localhost:3000
 
 
-## 📦 Features
+## 📦 機能一覧
+<p>リアルタイムチャット(Action cable)</p>
+<p>英単語投稿機能(CURD)</p>
+<p>画像登録機能(carriewave)</p>
+<p>タグ機能(acts-as-taggable-on)</p>
+<p>コメント投稿・削除機能(Ajax)</p>
+<p>いいね機能(Ajax)</p>
+<p>ユーザーフォロー機能(Ajax)</p>
+<p>ページネーション機能(kaminari)</p>
 
-<h3 align="center">- PWA -</h3>
+## 使用技術
+<p>Ruby 2.5.1</p>
+<p>Ruby on Rails 5.2.3</p>
+<p>Sass, Bootstrap, jQuery</p>
+<p>Unicorn</p>
+<p>Nginx</p>
+<p>Capistrano</p>
+<p>AWS(VPC,EC2,Route53</p>
 
-<p align="center">
-  <img src="https://〜.jpg" width=40%>
-</p>

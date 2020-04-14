@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def user_search
-    @users = User.search(params[:search])
+    @users = User.search(params[:search]).page(params[:page]).per(6)
     respond_to do |format|
       format.html
       format.json
