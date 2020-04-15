@@ -13,7 +13,7 @@ h1 {
   background-position: center top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .chat_box{
@@ -191,6 +191,7 @@ p.kaiwa-text:last-child {
   }
 }
 
+//スクロールボタン
 .scroll_bottom{
   color:black;
   position: fixed;
