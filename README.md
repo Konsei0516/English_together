@@ -1,30 +1,19 @@
 # English_together
 
-![English_together]([![Screenshot from Gyazo](https://gyazo.com/0cded443477b50e0bad6e51975bb4226/raw)])
-
-<h2 align="center">English_together</h2>
-
-<p align="center">
-  <a href="vue公式サイトURL"><img src="https://〜.png" width="80px;" /></a>
-  <br>
-  <a href="PWA公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-  <a href="Firebase公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-  <a href="firealpaca公式サイトURL"><img src="https://〜.png" height="40px;" /></a>
-  <a href="sweetalert公式サイトURL"><img src="https://〜.png" height="45px;" /></a>
-</p>
+![English_together]([!(https://gyazo.com/0cded443477b50e0bad6e51975bb4226/raw)])
 
 ## 🌐 App URL
 
-### ** http://18.180.23.221/**  
+### **http://english-together.work/**  
 
 ## 💬 Usage
 
-`$ git clone https://github.com/Konsei0516/English_together.git`
-`$ cd English_together`
-`$ bundle install`
-`$ rails db:create`
-`$ rails db:migrate`
-`$ rails s`
+`$ git clone https://github.com/Konsei0516/English_together.git`</br>
+`$ cd English_together`</br>
+`$ bundle install`</br>
+`$ rails db:create`</br>
+`$ rails db:migrate`</br>
+`$ rails s`</br>
 👉 http://localhost:3000
 
 
