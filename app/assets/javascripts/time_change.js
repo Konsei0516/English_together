@@ -1,3 +1,4 @@
+//夕方以降の背景変更
 $(document).on('turbolinks:load',function(){
   var getH = new Date().getHours();
   if((getH >= 6) && (getH < 17)) { $('.chat_box').removeClass('night').addClass('morning'); }

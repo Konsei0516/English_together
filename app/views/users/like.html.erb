@@ -10,7 +10,7 @@
         <%= image_tag("no-image.png") %>
       <% end %>
     </div>
-    <p class="main__user__top__name">name: <%= current_user.name %>
+    <p class="main__user__top__name">name :<%= current_user.name %>
     <%= link_to edit_user_path(@user),class: "main__user__top__edit" do%>
       <%= fa_icon("edit") %>
     <% end %>
@@ -23,7 +23,7 @@
 </div>
 <% else %>
 <div class="main__user">
-  <p class="main__user__top__name">名前 :<%= @user.name %></p>
+  <p class="main__user__top__name">name :<%= @user.name %></p>
   <p class="main__user__top__profile">プロフィール<br/><%= @user.profile %></p>
   <%= render 'follow_form' %>
   <%= render 'stats' %>

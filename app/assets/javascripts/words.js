@@ -1,3 +1,4 @@
+//動的なタグ付け
 $(document).on('turbolinks:load',function() {
   var i, len, ref, results, tag;
   $('#article-tags').tagit({
