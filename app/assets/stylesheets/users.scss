@@ -2,13 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin loginBtn{
+  display: inline-block;
+  padding: 1rem 2rem;
+  width: 250px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 35px;
+  cursor: pointer;
+}
+
 //ログインページ
 .login__top{
-  //background:image-url('login');
-  //background-size:100%;
-  //background-repeat:none;
+    background: image-url('login');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     padding: 7rem 0;
     text-align: center;
+    height:100%;
+    width: 100%;
   &__container{
     //padding-top:85px;
     margin: 0 auto;
@@ -18,31 +34,16 @@
       position: relative;
       letter-spacing: .2rem;
       font-size: 2.3rem;
+      color:white;
     }
     &__btn{
+      @include loginBtn
       display: inline-block;
-      padding: 1rem 3rem;
-      width: 250px;
-      outline: none;
-      border: none;
-      border-radius: 20px;
       background: linear-gradient(to right, rgb(7, 164, 255), #3bc1ff);
-      color: #fff;
-      font-size: 1.5rem;
-      line-height: 35px;
-      cursor: pointer;
       &__sessions{
+        @include loginBtn
         display: inline-block;
-        padding: 1rem 3rem;
-        width: 250px;
-        outline: none;
-        border: none;
-        border-radius: 20px;
-        background: linear-gradient(to right, rgb(255, 7, 234), #ff3be5);
-        color: #fff;
-        font-size: 1.5rem;
-        line-height: 35px;
-        cursor: pointer;
+        background: linear-gradient(to right, rgb(255, 7, 214), #e444e4);
       }
     }
   }
@@ -51,17 +52,22 @@
 .field {
   margin-bottom: 10px;
   text-align:  center;
-  margin-top: 2.5rem;
+  margin-top: 1.8rem;
   padding: 5px;
   &__label {
-    font-size:24px
+    font-size:24px;
+    color:white;
   }
   &__input {
     padding: .5rem 1rem;
     width: 50%;
-    border: 1px solid #333;
+    border: 2px solid rgb(250, 249, 249);
     border-radius: 3px;
     font-size: 1.1rem;
+    color:white;
+  }
+  &__input::placeholder {
+    color: rgba(255, 255, 255, 0.712);
   }
 }
 
@@ -141,6 +147,29 @@
   width: 100%;
   height:auto;
   text-align: center;
+}
+
+//Edit
+.edit__top{
+  background: image-url('edit');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 7rem 0;
+  text-align: center;
+  height:auto;
+  width: 100%;
+  &__container{
+    //padding-top:85px;
+    margin: 0 auto;
+    max-width: 1080px;
+    &__title{
+      position: relative;
+      letter-spacing: .2rem;
+      font-size: 2.3rem;
+      color:white;
+    }
+  }
 }
 
 //ユーザーの一覧

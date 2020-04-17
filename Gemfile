@@ -43,6 +43,8 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -84,6 +86,7 @@ gem 'mini_magick'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'jquery-ui-rails'
 gem 'gon'
+
 
 group :production do
   gem 'unicorn', '5.4.1'

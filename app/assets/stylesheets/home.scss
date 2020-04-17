@@ -3,6 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
 
+@mixin homeBtn{
+  font-size: 30px;
+  z-index: 1;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin:3rem;
+  width: 200px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  line-height: 35px;
+  cursor: pointer;
+  text-align: center;
+}
+
 //top
 .hero {
   background: image-url('top');
@@ -42,57 +58,22 @@
 }
 
 .hero__room{
-  font-size: 30px;
-  z-index: 1;
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin:3rem;
-  width: 200px;
-  outline: none;
-  border: none;
-  border-radius: 20px;
+  @include homeBtn;
   background: linear-gradient(to right, rgb(83, 228, 114), #25dfb0);
   color: rgb(248, 248, 246);
-  font-size: 1.1rem;
-  line-height: 35px;
-  cursor: pointer;
-  text-align: center;
 }
 
 .hero__link{
-  font-size: 30px;
-  z-index: 1;
-  display: inline-block;
-  padding: 1rem 2rem;
-  margin:3rem;
-  width: 200px;
-  outline: none;
-  border: none;
-  border-radius: 20px;
+  @include homeBtn;
   background: linear-gradient(to right, rgb(67, 164, 212), #40ccdf);
   color: rgb(248, 248, 246);
-  font-size: 1.1rem;
-  line-height: 35px;
-  cursor: pointer;
-  text-align: center;
+
 }
 
 .hero__login{
-  font-size: 30px;
-  z-index: 1;
-  display: inline-block;
-  padding: 1rem 3rem;
-  margin:3rem;
-  width: 200px;
-  outline: none;
-  border: none;
-  border-radius: 20px;
+  @include homeBtn;
   background: linear-gradient(to right, rgb(236, 236, 231), #e6e7e0);
   color: rgb(116, 88, 88);
-  font-size: 1.1rem;
-  line-height: 35px;
-  cursor: pointer;
-  text-align: center;
 }
 
 .top__sub{
@@ -115,17 +96,14 @@
   &__photo {
     padding: 10px;
   }
-
   &__date {
     display: inline-block;
     text-align: center;
     width: 100%;
   }
-
   &__icon {
     display: inline-block;
   }
-
   &__response-list {
     text-align: center;
     width: 100%;

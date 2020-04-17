@@ -32,7 +32,7 @@ class WordsController < ApplicationController
 
   def create
     @word = Word.new(word_params.merge(user_id: current_user.id))
-    
+
     if @word.save
       redirect_to words_path, notice:"投稿しました"
     else
@@ -55,7 +55,6 @@ class WordsController < ApplicationController
 
   def search
     @words = Word.search(params[:keyword]).page(params[:page]).per(9)
-    #@words = Kaminari.paginate_array(@word)
     respond_to do |format|
       format.html
       format.json
