@@ -2,7 +2,7 @@
 
 ![English_together](https://gyazo.com/5aecf8db51e4a501826053a0461787c9/raw)
 
-!(https://gyazo.com/8f9425b53f7ed892ef366a8a9037a347/raw)
+![English_together](https://gyazo.com/8f9425b53f7ed892ef366a8a9037a347/raw)
 
 ## 🌐 App URL
 
