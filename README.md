@@ -44,10 +44,13 @@ English togetherはチャットと投稿機能を使用して英語をアウト�
 
 
 ## 📗 使用技術
-<p>Ruby 2.5.1</p>
-<p>Ruby on Rails 5.2.3</p>
-<p>Sass, Bootstrap, jQuery</p>
-<p>Unicorn</p>
-<p>Nginx</p>
-<p>Capistrano</p>
-<p>AWS(VPC,EC2,Route53,RDS)</p>
+<ul>
+  <li>Ruby 2.5.1</li>
+  <li>Ruby on Rails 5.2.3</li>
+  <li>Sass, Bootstrap, jQuery</li>
+  <li>RSpec</li>
+  <li>Unicorn</li>
+  <li>Nginx</li>
+  <li>Capistrano</li>
+  <li>AWS(VPC,EC2,Route53,RDS)</li>
+</ul>
