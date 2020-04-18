@@ -3,6 +3,11 @@ require 'support/factory_bot'
 
 describe User do
   describe '#create' do
+    it "値が全て存在すれば登録できること" do
+      user = build(:user)
+      expect(user).to be_valid
+    end
+
     it "nameがない場合は登録できないこと" do
       user = build(:user, name: "")
       user.valid?
