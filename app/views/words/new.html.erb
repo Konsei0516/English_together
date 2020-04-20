@@ -1,14 +1,13 @@
 <%= render 'link/header'%>
 <div class="main__index">
-  <h2>＜ 投稿 ＞</h2>
-  <%= link_to '一覧へ', words_path, class: 'btn btn-info'%>
-</div>
-<div class="word__main">
-  <div class = "word__main__box">
-    <div>
-      <%= render partial: "form", locals: { word:@word,category:@categories}%>
+  <div class="word__main">
+    <div class = "word__main__box">
+      <h2>＜ 投稿 ＞</h2>
+      <div>
+        <%= render partial: "form", locals: { word:@word,category:@categories}%>
+      </div>
     </div>
-  </div>
-<div>
+  <div>
+</div>
 
 

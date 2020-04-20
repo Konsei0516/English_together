@@ -3,6 +3,10 @@
   padding:2rem;
   text-align: center;
   background-color:white;
+  background: image-url('new');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   &__box{
     margin:0 auto;
     max-width: 1080px;
@@ -117,7 +121,7 @@
 //form
 .form__group{
   margin-top:10px;
-  padding: 2rem;
+  padding: 1rem;
   &__label{
     display:block;
     font-size:1.6rem;
@@ -139,11 +143,11 @@
 }
 
 .main__index{
-  padding:150px 0 1rem;
+  padding:50px;
   width: 100%;
   height:auto;
   text-align: center;
-  background: linear-gradient(to bottom, rgb(25, 210, 185), #5ef4ff);
+  position: fixed;
   &__box{
     padding:20px;
   }
