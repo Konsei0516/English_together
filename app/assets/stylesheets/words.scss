@@ -3,10 +3,6 @@
   padding:2rem;
   text-align: center;
   background-color:white;
-  background: image-url('new');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
   &__box{
     margin:0 auto;
     max-width: 1080px;
@@ -70,22 +66,43 @@
   }
 }
 
+//投稿
+.new__main{
+  padding:2rem;
+  text-align: center;
+  background-color:white;
+  background: image-url('new');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  &__box{
+    margin:0 auto;
+    max-width: 1080px;
+    height: auto;
+  }
+}
+
 //show
 .word__show{
   padding:2rem;
   text-align: center;
   background-color:white;
+  &__text{
+    padding:25px;
+  }
   &__box{
     margin:0 auto;
     max-width: 1080px;
     height: auto;
     &__card{
+      margin:0 auto;
       margin-bottom: 2rem;
       position: relative;
       display: flex;
       flex-flow: column;
       justify-content: space-between;
       height:480px;
+      width:560px;
       border-radius: 3px;
       background-color: whitesmoke;
       box-shadow: 0 1px 5px #999;

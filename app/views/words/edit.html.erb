@@ -1,10 +1,9 @@
 <%= render 'link/header'%>
+<div class="main">
+</div>
 <div class="word__main">
-
   <div class = "nav.justify-content-end">
     <h1>Edit(編集)</h1>
-    <%= link_to '一覧', words_path, class:'btn btn-info'%>
   </div>
-
   <%= render partial: "form", locals: { word: @word }%>
 </div>
