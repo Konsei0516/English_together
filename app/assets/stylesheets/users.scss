@@ -1,20 +1,3 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-@mixin loginBtn{
-  display: inline-block;
-  padding: 1rem 2rem;
-  width: 250px;
-  outline: none;
-  border: none;
-  border-radius: 20px;
-  color: #fff;
-  font-size: 1.5rem;
-  line-height: 35px;
-  cursor: pointer;
-}
-
 //ログインページ
 .login__top{
     background: image-url('login');
@@ -37,12 +20,28 @@
       color:white;
     }
     &__btn{
-      @include loginBtn
       display: inline-block;
+      padding: 1rem 2rem;
+      width: 250px;
+      outline: none;
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 1.5rem;
+      line-height: 35px;
+      cursor: pointer;
       background: linear-gradient(to right, rgb(7, 164, 255), #3bc1ff);
       &__sessions{
-        @include loginBtn
         display: inline-block;
+        padding: 1rem 2rem;
+        width: 250px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 1.5rem;
+        line-height: 35px;
+        cursor: pointer;
         background: linear-gradient(to right, rgb(255, 7, 214), #e444e4);
       }
     }
