@@ -12,6 +12,10 @@
 
 ## 🔍 Usage
 
+<h3>テストユーザーログイン</h3>
+<p>email: test@test.com</p>
+<p>password: test1234</p>
+
 `$ git clone https://github.com/Konsei0516/English_together.git`<br>
 `$ cd English_together`<br>
 `$ bundle install`<br>
