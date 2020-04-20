@@ -4,6 +4,7 @@
 
 ![English_together](https://gyazo.com/8f9425b53f7ed892ef366a8a9037a347/raw)
 
+<h2>ER図</h2>
 ![English_together](https://gyazo.com/f6f49efcbeff317e6207f5ead0f8bae9/raw)
 
 ## 🌐 App URL
@@ -21,7 +22,7 @@
 👉 http://localhost:3000
 
 ## 💬 What App?
-English togetherはチャットと投稿機能を使用して英語をアウトプットできる学習WEBアプリケーションです。
+English togetherはチャットと投稿機能を使用して英語をアウトプットできるWEBアプリケーションです。
 
 ## ❓Why?
 <p>プログラミング学習をしていると英語からは逃れられません。</p>
@@ -57,6 +58,13 @@ English togetherはチャットと投稿機能を使用して英語をアウト�
   <li>AWS(VPC,EC2,Route53,RDS)</li>
 </ul>
 
-## DEMO
+## 📝　今後の課題
+<ul>
+  <li>フォローしているもの同士のDM機能</li>
+  <li>レスポンシブ対応</li>
+  <li>Dockerでの環境構築</li>
+</ul>
+
+## 👀 DEMO
 ![Screenshot from Gyazo](https://gyazo.com/8ee92ae379d450432f3f255a6748418e/raw)
 ![Screenshot from Gyazo](https://gyazo.com/a59811ae9387f1f6621bce0880ef5275/raw)
