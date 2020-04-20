@@ -4,7 +4,7 @@
 
 ![English_together](https://gyazo.com/8f9425b53f7ed892ef366a8a9037a347/raw)
 
-<h2>ER図</h2>
+<p>ER図</p>
 ![English_together](https://gyazo.com/f6f49efcbeff317e6207f5ead0f8bae9/raw)
 
 ## 🌐 App URL
