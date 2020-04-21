@@ -1,8 +1,8 @@
 <%= render 'link/header'%>
-<div class="main__index">
-  <h3>タグ「<%= @tag_name %>」の一覧</h3>
+<div class="main">
 </div>
 <div class="word__main">
+  <h3>タグ「<%= @tag_name %>」の一覧</h3>
   <div class="word__main__box">
     <div class="word__wrapper">
       <% @words.each do |word| %>
@@ -32,7 +32,8 @@
           <%= render partial: 'tags', locals: { tags: word.tags }%>
         </div>
       </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
   <%= paginate @words %>
 </div>
