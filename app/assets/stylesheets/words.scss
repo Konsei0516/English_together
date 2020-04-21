@@ -34,13 +34,13 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    height:320px;
     border-radius: 3px;
     background-color: whitesmoke;
     box-shadow: 0 1px 5px #999;
     cursor: pointer;
     transition: .3s;
     border: 2px #2196F3;
+    height:320px;
     &:hover {
       transition: .3s;
       transform: translateY(-3px);
@@ -95,14 +95,14 @@
     max-width: 1080px;
     height: auto;
     &__card{
+      height:480px;
+      width:560px;
       margin:0 auto;
       margin-bottom: 2rem;
       position: relative;
       display: flex;
       flex-flow: column;
       justify-content: space-between;
-      height:480px;
-      width:560px;
       border-radius: 3px;
       background-color: whitesmoke;
       box-shadow: 0 1px 5px #999;
