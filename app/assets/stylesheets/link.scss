@@ -8,7 +8,7 @@
   cursor: pointer;
   position: absolute;
 }
-
+@media (min-width: 1080px){
 .header{
   background: linear-gradient(to bottom,  #39a3aa);
   position: fixed;
@@ -81,6 +81,7 @@ ul li{
 .post{
   color:white;
   font-size: 20px;
+}
 }
 
 //投稿ボタン

@@ -17,7 +17,7 @@
     <div class ="word__wrapper__card__btn">
     <% if current_user.id == rank.user.id %>
       <%= link_to '編集', edit_word_path(rank), class: 'btn btn-success' %>
-      <%= link_to '削除', rank, method: :delete, data:{ confirm: "タスク「#{rank.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger delete' %>
+      <%= link_to '削除', rank, method: :delete, data:{ confirm: "word「#{rank.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger delete' %>
     <% end %>
     </div>
   </div>

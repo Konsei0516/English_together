@@ -20,7 +20,7 @@
       <div class ="word__wrapper__card__btn">
       <% if word.user == current_user %>
         <%= link_to '編集', edit_word_path(word), class: 'btn btn-success' %>
-        <%= link_to '削除', word, method: :delete, data:{ confirm: "タスク「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
+        <%= link_to '削除', word, method: :delete, data:{ confirm: "word「#{word.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger' %>
       <% end %>
       </div>
       <div class="card-footer">
