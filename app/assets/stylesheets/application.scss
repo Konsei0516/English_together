@@ -21,6 +21,10 @@
 @import "./font-awesome";
 @import "/flash";
 
+*{
+  box-sizing:border-box;
+}
+
 .pagination {
   justify-content: center;
 }

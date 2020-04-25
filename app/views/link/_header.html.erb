@@ -1,15 +1,13 @@
 <header class="header">
   <div class="container row">
     <% if user_signed_in? %>
-      <div class="user_nav grid-6">
-        <ul class="header__list">
-          <li class="header__users"><i class="material-icons">perm_identity</i><%= link_to "ユーザー一覧", users_path, class:"header__word" %></li>
-          <li class="header__new"><i class="material-icons">create</i><%= link_to "新規投稿", new_word_path, class:"header__word" %></li>
-          <li><%= link_to "English together", root_path, class: 'header__title' %></li>
-          <li class="header__contents"><i class="material-icons">directions_run</i><%= link_to "ログアウト", destroy_user_session_path, method: :delete , class:"header__word"%></li>
-          <li class= "header__name"><%= link_to current_user.name, user_path(current_user), class:"header__word"%></li>
-        </ul>
-      </div>
+      <ul class="header__list">
+        <li class="header__users"><i class="material-icons">perm_identity</i><%= link_to "ユーザー一覧", users_path, class:"header__word" %></li>
+        <li class="header__new"><i class="material-icons">create</i><%= link_to "新規投稿", new_word_path, class:"header__word" %></li>
+        <li><%= link_to "English together", root_path, class: 'header__title' %></li>
+        <li class="header__contents"><i class="material-icons">directions_run</i><%= link_to "ログアウト", destroy_user_session_path, method: :delete , class:"header__word"%></li>
+        <li class= "header__name"><%= link_to current_user.name, user_path(current_user), class:"header__word"%></li>
+      </ul>
     <% else %>
       <div class="grid-6">
         <ul class="header__list">
