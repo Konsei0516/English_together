@@ -18,8 +18,14 @@
   border-radius: 10px;
 }
 
-.search-category{
+.word-category{
+  border-radius: 5px;
+  width:60px;
   border: 1px solid rgb(40, 54, 54);
+}
+
+.word__none{
+  padding-top:80px;
 }
 
 .search-btn,
@@ -31,6 +37,9 @@
   border-radius: 10px;
   &:hover{
     background:rgb(206, 60, 67);
+  }
+  &__color{
+    color:white;
   }
 }
 

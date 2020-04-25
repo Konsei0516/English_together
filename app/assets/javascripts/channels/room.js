@@ -1,3 +1,4 @@
+//Action cable
 document.addEventListener('turbolinks:load', function() {
   return App.room = App.cable.subscriptions.create({
     channel: "RoomChannel",

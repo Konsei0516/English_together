@@ -7,8 +7,8 @@
 <%= render "search" %>
   <div class="word__main__box">
     <div class="container">
-      <div class="word__wrapper">
       <% if @words.present? %>
+      <div class="word__wrapper">
         <% @words.each do |word| %>
         <div class="word__wrapper__card">
           <div class= "word__wrapper__card__title">
@@ -34,10 +34,10 @@
           </div>
         </div>
         <% end %>
-      <% else %>
-        <h2>単語は存在しません</h2>
-      <% end %>
       </div>
+      <% else %>
+        <h2 class="word__none">単語は存在しません</h2>
+      <% end %>
       <%= paginate(@words) %>
     </div>
   </div>

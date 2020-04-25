@@ -1,6 +1,10 @@
 class Word < ApplicationRecord
   acts_as_taggable
 
+  scope :get_by_category, ->(category) {
+    where(category: category)
+  }
+
   #バリデーション
   VALID_WORD_NAME_REGEX = /\A[\w` -]*[A-Za-z][\w` -]*\z/
   validates :name, presence: true,format: { with: VALID_WORD_NAME_REGEX}

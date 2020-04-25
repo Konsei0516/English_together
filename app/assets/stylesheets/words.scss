@@ -19,8 +19,7 @@
     }
   }
 }
-
-//カード
+//カード-----------------------
 .word__wrapper{
   display: grid;
   margin: 3rem 0 0;
@@ -66,7 +65,7 @@
   }
 }
 
-//投稿
+//投稿-------------------------------
 .new__main{
   padding:2rem;
   text-align: center;
@@ -82,7 +81,7 @@
   }
 }
 
-//show
+//show--------------------------
 .word__show{
   padding:2rem;
   text-align: center;
@@ -182,7 +181,7 @@
 .tag_list{
   padding:50px;
   &__title{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     &__content{
       margin:0 auto;    
     }
