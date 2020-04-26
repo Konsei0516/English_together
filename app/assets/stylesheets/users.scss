@@ -115,10 +115,16 @@
       margin:20px;
     }
     &__like{
+      width:180px;
       font-size: 2rem;
-      margin:20px;
+      margin:0 auto;
+      background-color: rgb(1, 48, 255);
+      border-radius: 20px; 
+      a {
+        color:whitesmoke;
+      }
       &:hover {
-        text-shadow: 0 5px 5px #b388ff;
+        text-shadow: 0 5px 5px #FFF;
         transition: .3s;
         transform: translateY(-3px);
       }
@@ -138,6 +144,11 @@
         }
       }
     }
+  }
+  &__profile{
+    border: 2px solid #fff;
+    margin:25px;
+    border-radius: 20px; 
   }
 }
 

@@ -7,7 +7,7 @@ class Word < ApplicationRecord
 
   #バリデーション
   VALID_WORD_NAME_REGEX = /\A[\w` -]*[A-Za-z][\w` -]*\z/
-  validates :name, presence: true,format: { with: VALID_WORD_NAME_REGEX}
+  validates :name, presence: true,format: { with: VALID_WORD_NAME_REGEX }
   validates :description, presence: true
   validates :category, presence: true
 

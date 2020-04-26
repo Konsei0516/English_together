@@ -8,13 +8,15 @@
         <%= image_tag("no-image.png") %>
       <% end %>
     </div>
-    <p class="main__user__top__name">name :<%= current_user.name %>
+    <p class="main__user__top__name">名前 :<%= current_user.name %>
     <%= link_to edit_user_path(@user),class: "main__user__top__edit" do%>
       <%= fa_icon("edit") %>
     <% end %>
     </p>
-    <p class="main__user__top__profile">profile<br/><%= current_user.profile %></p>
-    <p class="main__user__top__like"><%= link_to("いいね", "/users/#{@user.id}/like") %></p>
+    <div class="main__user__profile">
+      <p class="main__user__top__profile">プロフィール<br/><%= current_user.profile %></p>
+    </div>
+    <p class="main__user__top__like"><%= link_to("いいね一覧", "/users/#{@user.id}/like") %></p>
     <%= render 'follow_form', class: "follow_form"%>
     <%= render 'stats', class: "follow_stats" %>
   </div>
