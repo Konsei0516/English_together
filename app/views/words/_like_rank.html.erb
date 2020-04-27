@@ -9,7 +9,7 @@
       <%= link_to rank.description, word_path(rank) %>
     </div>
     <div class="word__wrapper__card__name">
-      <%= link_to rank.user.name %>
+      <%= link_to rank.user.name, user_path(rank.user_id) %>
     </div>
     <div id="likes_buttons_<%= rank.id %>">
       <%= render partial: 'likes/like', locals: { word: rank, likes: @likes} %>

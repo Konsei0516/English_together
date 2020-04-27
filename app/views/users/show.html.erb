@@ -11,7 +11,9 @@
     <% end %>
   </div>
   <p class="main__user__top__name">名前<br/><%= @user.name %></p>
-  <p class="main__user__top__profile">プロフィール<br/><%= @user.profile %></p>
+  <div class="main__user__profile">
+    <p class="main__user__top__profile">プロフィール<br/><%= @user.profile %></p>
+  </div>
   <%= render 'follow_form' %>
   <%= render 'stats' %>
 </div>
