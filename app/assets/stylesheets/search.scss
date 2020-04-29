@@ -1,5 +1,5 @@
 .search{
-  width:650px;
+  width:480px;
   margin:0 auto;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .word-category{
-  border-radius: 5px;
+  border-radius: 10px;
   width:90px;
   border: 1px solid rgb(40, 54, 54);
   cursor: pointer;
@@ -43,6 +43,7 @@
   display: inline-block;
   padding: 10px 20px;
   border-radius: 10px;
+  cursor: pointer;
   &:hover{
     background:rgb(255, 1, 192);
   }

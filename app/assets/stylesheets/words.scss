@@ -38,7 +38,7 @@
     box-shadow: 0 1px 5px #999;
     cursor: pointer;
     transition: .3s;
-    border: 2px #2196F3;
+    border: 2px #3CCACE;
     height:320px;
     &:hover {
       transition: .3s;
@@ -46,9 +46,9 @@
     }
     &__title{
       padding-bottom: 10px;
-      border-bottom: 2px dotted #2196F3;
+      border-bottom: 2px dotted #3CCACE;
       font-weight: bold;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
     &__description{
       margin-top: 1rem;
@@ -107,14 +107,14 @@
       box-shadow: 0 1px 5px #999;
       cursor: pointer;
       transition: .3s;
-      border: 2px #2196F3;
+      border: 2px #3CCACE;
       &:hover {
         transition: .3s;
         transform: translateY(-3px);
       }
       &__title{
         padding-bottom: 10px;
-        border-bottom: 2px dotted #2196F3;
+        border-bottom: 2px dotted #3CCACE;
         font-weight: bold;
         font-size: 2rem;
       }

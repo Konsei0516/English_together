@@ -9,9 +9,8 @@
     margin:20px;
   }
   a{
-    color:white;
+    color:rgb(3, 40, 245);
     &:hover {
-      text-shadow: 0 5px 5px #fffd88;
       transition: .3s;
       transform: translateY(-3px);
     }
