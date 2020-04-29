@@ -44,7 +44,7 @@ class WordsController < ApplicationController
     if @word.destroy
       redirect_to words_url,notice:"削除しました"
     else
-      redirect_to word_url,alert:"削除に失敗しました"
+      redirect_to words_url,alert:"削除に失敗しました"
     end
   end
 
@@ -55,6 +55,9 @@ class WordsController < ApplicationController
 
   def search
     @words = Word.search(params[:keyword]).page(params[:page]).per(9)
+    if params[:category].present?
+      @words = @words.get_by_category params[:category]
+    end
     respond_to do |format|
       format.html
       format.json

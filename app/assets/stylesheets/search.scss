@@ -1,5 +1,5 @@
 .search{
-  width:650px;
+  width:480px;
   margin:0 auto;
 }
 
@@ -18,8 +18,22 @@
   border-radius: 10px;
 }
 
-.search-category{
+.word-category{
+  border-radius: 10px;
+  width:90px;
   border: 1px solid rgb(40, 54, 54);
+  cursor: pointer;
+  float:left;
+  height:45px;
+  line-height:45px;
+  &__box{
+    cursor: pointer;
+    font-size:1.1rem;
+  }
+}
+
+.word__none{
+  padding-top:80px;
 }
 
 .search-btn,
@@ -29,8 +43,12 @@
   display: inline-block;
   padding: 10px 20px;
   border-radius: 10px;
+  cursor: pointer;
   &:hover{
-    background:rgb(206, 60, 67);
+    background:rgb(255, 1, 192);
+  }
+  &__color{
+    color:white;
   }
 }
 

@@ -31,7 +31,7 @@
             allowDuplicates   : false,
             caseSensitive     : true,
             fieldName         : 'tags',
-            placeholderText   : 'タグを入力',   // Sets `placeholder` attr on input field.
+            placeholderText   : 'タグを入力(Enter)',   // Sets `placeholder` attr on input field.
             readOnly          : false,  // Disables editing.
             removeConfirmation: false,  // Require confirmation to remove tags.
             tagLimit          : null,   // Max number of tags allowed (null for unlimited).

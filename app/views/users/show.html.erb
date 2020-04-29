@@ -11,7 +11,9 @@
     <% end %>
   </div>
   <p class="main__user__top__name">名前<br/><%= @user.name %></p>
-  <p class="main__user__top__profile">プロフィール<br/><%= @user.profile %></p>
+  <div class="main__user__profile">
+    <p class="main__user__top__profile">プロフィール<br/><%= @user.profile %></p>
+  </div>
   <%= render 'follow_form' %>
   <%= render 'stats' %>
 </div>
@@ -19,7 +21,7 @@
 
 
 <div class="main__word">
-  <h2><%= fa_icon("book") %>word memory</h2>
+  <h2><%= fa_icon("book") %>投稿</h2>
   <%= render partial: "words/my-index", locals: { word: @word }%>
 </div>
 

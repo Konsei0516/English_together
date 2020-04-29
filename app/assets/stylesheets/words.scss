@@ -19,8 +19,7 @@
     }
   }
 }
-
-//カード
+//カード-----------------------
 .word__wrapper{
   display: grid;
   margin: 3rem 0 0;
@@ -39,7 +38,7 @@
     box-shadow: 0 1px 5px #999;
     cursor: pointer;
     transition: .3s;
-    border: 2px #2196F3;
+    border: 2px #3CCACE;
     height:320px;
     &:hover {
       transition: .3s;
@@ -47,9 +46,9 @@
     }
     &__title{
       padding-bottom: 10px;
-      border-bottom: 2px dotted #2196F3;
+      border-bottom: 2px dotted #3CCACE;
       font-weight: bold;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
     &__description{
       margin-top: 1rem;
@@ -66,7 +65,7 @@
   }
 }
 
-//投稿
+//投稿-------------------------------
 .new__main{
   padding:2rem;
   text-align: center;
@@ -82,7 +81,7 @@
   }
 }
 
-//show
+//show--------------------------
 .word__show{
   padding:2rem;
   text-align: center;
@@ -108,14 +107,14 @@
       box-shadow: 0 1px 5px #999;
       cursor: pointer;
       transition: .3s;
-      border: 2px #2196F3;
+      border: 2px #3CCACE;
       &:hover {
         transition: .3s;
         transform: translateY(-3px);
       }
       &__title{
         padding-bottom: 10px;
-        border-bottom: 2px dotted #2196F3;
+        border-bottom: 2px dotted #3CCACE;
         font-weight: bold;
         font-size: 2rem;
       }
@@ -182,7 +181,7 @@
 .tag_list{
   padding:50px;
   &__title{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     &__content{
       margin:0 auto;    
     }

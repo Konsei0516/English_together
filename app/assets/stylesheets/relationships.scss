@@ -8,10 +8,12 @@
     font-size: 2rem;
     margin:20px;
   }
-  &:hover {
-    text-shadow: 0 5px 5px #fffd88;
-    transition: .3s;
-    transform: translateY(-3px);
+  a{
+    color:rgb(3, 40, 245);
+    &:hover {
+      transition: .3s;
+      transform: translateY(-3px);
+    }
   }
 }
 
