@@ -1,4 +1,4 @@
-# <a href="http://english-together.work/">English_together</a>
+# <a href="http://18.180.23.221/">English_together</a>
 
 ![English_together](https://gyazo.com/5aecf8db51e4a501826053a0461787c9/raw)
 
@@ -8,7 +8,7 @@
 
 ## 🌐 App URL
 
-### **http://english-together.work/**  
+### **http://18.180.23.221/**  
 
 ## 🔍 Usage
 
