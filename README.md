@@ -12,9 +12,8 @@
 
 ## 🔍 Usage
 
-<h3>テストユーザーログイン</h3>
-<p>email: test@test.com</p>
-<p>password: test1234</p>
+<h3>ログイン方法</h3>
+<p>ヘッダーの簡単ログインから全ての機能をお試しいただけます</p>
 
 `$ git clone https://github.com/Konsei0516/English_together.git`<br>
 `$ cd English_together`<br>
