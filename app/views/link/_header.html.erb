@@ -12,6 +12,13 @@
       <div class="grid-6">
         <ul class="header__list">
           <li><%= link_to "English together", root_path, class: 'header__title' %></li>
+          <li class="header__easy">
+            <%= form_for(User.new, url:session_path(resource_name)) do |f| %>
+              <%= f.hidden_field :email, value: "test@test.com" %>
+              <%= f.hidden_field :password, value: "test1234" %>
+              <%= f.submit "簡単ログイン", class:"easy-btn"%> 
+            <% end %>
+          </li>
           <li class="header__contents"><%= fa_icon("sign-out")%><%= link_to "ログイン", new_user_session_path, class:"header__word" %></li>
           <li class="header__name"><%= link_to "新規登録", new_user_registration_path, class:"header__word"  %></li>
         </ul>
