@@ -35,7 +35,7 @@ English togetherはチャットと投稿機能を使用して英語をアウト�
 
 ## 📦 機能一覧
 <ul>
-  <li>リアルタイムチャット(Action cable)<br>英語でのリアルタイムチャットができます。</li>
+  <li>リアルタイムチャット(Action cable)</li>
   <li>ログイン機能(devise)</li>
   <li>英単語投稿機能(CURD)</li>
   <li>画像登録機能(carriewave)</li>
