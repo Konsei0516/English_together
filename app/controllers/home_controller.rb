@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!, except: [:top,:about]
+  before_action :authenticate_user!, except: [:about]
 
   def top
     @words = Word.order(created_at: :desc).page(params[:page]).per(6)
