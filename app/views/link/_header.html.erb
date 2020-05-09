@@ -13,7 +13,7 @@
         <ul class="header__list">
           <li><%= link_to "English together", root_path, class: 'header__title' %></li>
           <li class="header__easy">
-            <%= form_for(User.new, url:session_path(resource_name)) do |f| %>
+            <%= form_for(User.create, url: user_session_path) do |f| %>
               <%= f.hidden_field :email, value: "test@test.com" %>
               <%= f.hidden_field :password, value: "test1234" %>
               <%= f.submit "簡単ログイン", class:"easy-btn"%> 
