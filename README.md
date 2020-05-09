@@ -46,6 +46,7 @@ English togetherはチャットと投稿機能を使用して英語をアウト�
   <li>ランキング機能</li>
   <li>検索機能（インクリメンタルサーチ）</li>
   <li>RSpecによる単体テスト</li>
+  <li>開発環境をDockerで構築</li>
 </ul>
 
 
@@ -59,13 +60,13 @@ English togetherはチャットと投稿機能を使用して英語をアウト�
   <li>Nginx</li>
   <li>Capistrano</li>
   <li>AWS(VPC,EC2,Route53,RDS)</li>
+  <li>docker</li>
 </ul>
 
 ## 📝　今後の課題
 <ul>
   <li>フォローしているもの同士のDM機能</li>
   <li>レスポンシブ対応</li>
-  <li>Dockerでの環境構築</li>
 </ul>
 
 ## 👀 DEMO
