@@ -10,18 +10,8 @@
 
 ### **http://18.180.23.221/**  
 
-## 🔍 Usage
-
 <h3>ログイン方法</h3>
 <p>ヘッダーの簡単ログインから全ての機能をお試しいただけます</p>
-
-`$ git clone https://github.com/Konsei0516/English_together.git`<br>
-`$ cd English_together`<br>
-`$ bundle install`<br>
-`$ rails db:create`<br>
-`$ rails db:migrate`<br>
-`$ rails s`<br>
-👉 http://localhost:3000
 
 ## 💬 What App?
 English togetherはチャットと投稿機能を使用して英語をアウトプットできるWEBアプリケーションです。
